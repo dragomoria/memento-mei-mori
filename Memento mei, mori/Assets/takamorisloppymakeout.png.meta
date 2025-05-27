@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      takamorisloppymakeout_0: -8860802692915099730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
