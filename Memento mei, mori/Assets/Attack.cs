@@ -10,18 +10,18 @@ public class Attack : MonoBehaviour
 
     private void SkullAttack()
     {
-        print("skull attack");
+        //print("skull attack");
         SkullPrefab = SkullBehavior.Instantiate(SkullPrefab, Spawn.position, transform.rotation);
     }
 
     private void Slash()
     {
-        print("slash");
+        //print("slash");
     }
 
     private void DiagonalSlash()
     {
-        print("diagonal slash");
+        //print("diagonal slash");
     }
 
     void Start()
@@ -66,7 +66,6 @@ public class Attack : MonoBehaviour
                 if (AttackID == 0)
                 {
                     currentSkull = SkullBehavior.Instantiate(SkullPrefab, Spawn.position, transform.rotation);
-                    print("skull attack");
                 }
                 else if (AttackID == 1)
                 {

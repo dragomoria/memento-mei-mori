@@ -131,9 +131,10 @@ GameObject:
   - component: {fileID: 51220014}
   - component: {fileID: 51220013}
   - component: {fileID: 51220017}
+  - component: {fileID: 51220018}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +230,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -4.3137846}
   m_SpriteTilingProperty:
     border: {x: 1.12, y: 1.3399999, z: 0.98999995, w: 0.71}
     pivot: {x: 0.5, y: 0.5}
@@ -239,8 +240,20 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 10, y: 7.3038864}
   m_EdgeRadius: 0.1
+--- !u!114 &51220018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51220012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0314b6a04f1e1d4e8ff003be13c4fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &112596775
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +790,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1145875218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145875219}
+  m_Layer: 0
+  m_Name: FeatherSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1145875219
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145875218}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.005, y: 0.305, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1210721657}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1156079143
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +919,7 @@ GameObject:
   - component: {fileID: 1210721657}
   - component: {fileID: 1210721656}
   - component: {fileID: 1210721658}
+  - component: {fileID: 1210721659}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -949,7 +994,8 @@ Transform:
   m_LocalPosition: {x: -0.07, y: -1.83, z: 0}
   m_LocalScale: {x: 7.3125, y: 4.7148438, z: 0}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1145875219}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &1210721658
@@ -998,6 +1044,20 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0.59, y: -0.6}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1210721659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210721654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4735900dc35ad2843aa10cac249f9bd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FeatherPrefab: {fileID: 681196056599404957, guid: e5f8c76fda4766c41a973357ae9365eb, type: 3}
+  SpawnOffset: {fileID: 1145875219}
 --- !u!1 &2144567290
 GameObject:
   m_ObjectHideFlags: 0
