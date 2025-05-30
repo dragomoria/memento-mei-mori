@@ -6,7 +6,7 @@ public class SpawnPickupBehavior : MonoBehaviour
     public FeatherBehavior FeatherPrefab;
     public Transform SpawnOffset;
     
-    private FeatherBehavior currentFeather;
+    private FeatherBehavior currentFeather= null;
     
     private void RandOffset()
     {
@@ -38,12 +38,9 @@ public class SpawnPickupBehavior : MonoBehaviour
 
     IEnumerator SpawnPickup()
     {
-        while(true)
-        {
-            yield return new WaitForSeconds(5);
-            SpawnFeather();
-            yield break;
-        }
+        yield return new WaitForSeconds(5);
+        SpawnFeather();
+        yield break;
     }
 
 }
