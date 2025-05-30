@@ -6,19 +6,21 @@ public class SpawnPickupBehavior : MonoBehaviour
     public FeatherBehavior FeatherPrefab;
     public Transform SpawnOffset;
     
+    private FeatherBehavior currentFeather;
+    
     private void RandOffset()
     {
-        float ver = Random.Range(-0.4f,0.4f);
-        float hor = Random.Range(-0.45f,0.3f);
+        float ver = Random.Range(-0.4f, 0.4f);
+        float hor = Random.Range(-0.45f, 0.3f);
         float dep = 0f;
 
-        SpawnOffset.transform.position = new Vector3(ver,hor,dep);
+        SpawnOffset.transform.position = new Vector3(ver, hor, dep);
     }
 
     private void SpawnFeather()
     {
         RandOffset();
-        FeatherPrefab = FeatherBehavior.Instantiate(FeatherPrefab, SpawnOffset.position, transform.rotation);
+        currentFeather = FeatherBehavior.Instantiate(FeatherPrefab, SpawnOffset.position, transform.rotation);
     }
     
     void Start()
@@ -28,7 +30,7 @@ public class SpawnPickupBehavior : MonoBehaviour
 
     void Update()
     {
-        if(FeatherPrefab == null)
+        if(currentFeather == null)
         {
             StartCoroutine(SpawnPickup());
         }
@@ -39,9 +41,8 @@ public class SpawnPickupBehavior : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(5);
-            
-                SpawnFeather();
-                yield break;
+            SpawnFeather();
+            yield break;
         }
     }
 
