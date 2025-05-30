@@ -19,20 +19,17 @@ public class Player : MonoBehaviour
     {
         curStatus = pawn.isSpawng;
 
-        if(curStatus == true)
+        /*if(curStatus == true)
         {
         FeatherStatus = pawn.pickStat;
         print(FeatherStatus);
         HealthUp();
-        }
+        }*/
     }
 
-    private void HealthUp()
+    public void HealthUp()
     {
-        if(FeatherStatus == true)
-        {
             health++;
             print(health);
-        }
     }
 }
