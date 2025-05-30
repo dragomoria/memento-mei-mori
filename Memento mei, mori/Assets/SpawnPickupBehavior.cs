@@ -7,6 +7,8 @@ public class SpawnPickupBehavior : MonoBehaviour
     public Transform SpawnOffset;
     
     private FeatherBehavior currentFeather= null;
+
+    private bool isSpawng = false;
     
     private void RandOffset()
     {
@@ -30,7 +32,7 @@ public class SpawnPickupBehavior : MonoBehaviour
 
     void Update()
     {
-        if(currentFeather == null)
+        if(currentFeather == null && !isSpawng)
         {
             StartCoroutine(SpawnPickup());
         }
@@ -38,9 +40,10 @@ public class SpawnPickupBehavior : MonoBehaviour
 
     IEnumerator SpawnPickup()
     {
+        isSpawng = true;
         yield return new WaitForSeconds(5);
         SpawnFeather();
-        yield break;
+        isSpawng = false;
     }
 
 }
