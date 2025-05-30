@@ -8,7 +8,9 @@ public class SpawnPickupBehavior : MonoBehaviour
     
     private FeatherBehavior currentFeather= null;
 
-    private bool isSpawng = false;
+    public bool isSpawng {get; set;}
+
+    public bool pickStat {get; set;}
     
     private void RandOffset()
     {
@@ -27,6 +29,7 @@ public class SpawnPickupBehavior : MonoBehaviour
     
     void Start()
     {
+        isSpawng = false;
         StartCoroutine(SpawnPickup());
     }
 

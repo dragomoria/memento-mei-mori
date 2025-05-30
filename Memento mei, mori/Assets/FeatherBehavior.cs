@@ -5,7 +5,10 @@ public class FeatherBehavior : MonoBehaviour
 {
     private bool Picked;
 
-    public bool GetPicked() => Picked;
+    public bool GetPicked()
+    {
+        return Picked;
+    }
 
     void Start()
     {
@@ -28,8 +31,9 @@ public class FeatherBehavior : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            Destroy(gameObject);
             Picked = true;
+
+            Destroy(gameObject);
         }
     }
 }
