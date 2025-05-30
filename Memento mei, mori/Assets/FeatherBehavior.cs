@@ -44,7 +44,6 @@ public class FeatherBehavior : MonoBehaviour
             Picked = true;
             collision.gameObject.GetComponent<Player>().HealthUp();
             FeatherCounter.instance.IncreaseFeathers(1);
-            // add vidual effect here
             Destroy(gameObject);
         }
     }

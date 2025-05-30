@@ -10,49 +10,23 @@ public class Attack : MonoBehaviour
 
     private void SkullAttack()
     {
-        //print("skull attack");
         SkullPrefab = SkullBehavior.Instantiate(SkullPrefab, Spawn.position, transform.rotation);
     }
 
     private void Slash()
     {
-        //print("slash");
+
     }
 
     private void DiagonalSlash()
     {
-        //print("diagonal slash");
+
     }
 
     void Start()
     {
         StartCoroutine(AttackChoice());
     }
-
-    /*IEnumerator AttackChoice()
-    {
-        while(true)
-        {
-            AttackID = Random.Range(0,3);
-
-            yield return new WaitForSeconds(1);
-
-            if (AttackID == 0)
-            {
-                SkullAttack();
-            }
-
-            else if (AttackID == 1)
-            {
-                Slash();
-            }
-
-            else if (AttackID == 2)
-            {
-                DiagonalSlash();
-            }
-        }
-    }*/
 
     IEnumerator AttackChoice()
     {

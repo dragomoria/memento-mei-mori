@@ -14,8 +14,8 @@ public class SpawnPickupBehavior : MonoBehaviour
     
     private void RandOffset()
     {
-        float ver = Random.Range(-0.4f, 0.4f);
-        float hor = Random.Range(-0.45f, 0.3f);
+        float ver = Random.Range(-3f, 3f);
+        float hor = Random.Range(-4F, 0F);
         float dep = 0f;
 
         SpawnOffset.transform.position = new Vector3(ver, hor, dep);

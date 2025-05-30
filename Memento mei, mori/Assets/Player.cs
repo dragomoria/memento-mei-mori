@@ -31,17 +31,16 @@ public class Player : MonoBehaviour
     public void HealthUp()
     {
             health++;
-            print(health);
     }
 
     private void Dead()
     {
-            SceneManager.LoadScene("Lose");
+            SceneManager.LoadScene("BadEnding");
     }
 
     private void WinTheGame()
     {
-        SceneManager.LoadScene("Win");
+        SceneManager.LoadScene("GoodEnding");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
