@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      czacha_0: 7458843526448901821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

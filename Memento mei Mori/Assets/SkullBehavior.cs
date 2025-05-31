@@ -39,7 +39,7 @@ public class SkullBehavior : MonoBehaviour
     {
         while (true)
         {
-            float rotAmount = 5000 * Time.deltaTime;
+            float rotAmount = 2000f * Time.deltaTime;
             totalRotation += rotAmount;
 
             transform.localRotation = Quaternion.Euler(0, 0, totalRotation);

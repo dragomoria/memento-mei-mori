@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d7cc08ac7489bf34082c0b3385a60282
+guid: 1e4ea70c43197fc4e9574124e45d199b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7252387423257973740
-    second: promo-art_0
+      213: -1194339203236411414
+    second: takamori tlo_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: promo-art_0
+      name: takamori tlo_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce35dc8cfe7a5a460800000000000000
-      internalID: 7252387423257973740
+      spriteID: ae745c192dadc6fe0800000000000000
+      internalID: -1194339203236411414
       vertices: []
       indices: 
       edges: []
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      takamori tlo_0: -1194339203236411414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
