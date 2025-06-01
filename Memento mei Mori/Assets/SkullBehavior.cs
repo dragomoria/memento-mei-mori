@@ -45,6 +45,7 @@ public class SkullBehavior : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 0, totalRotation);
             Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
 
+
             if (totalRotation >= 360f)
             {
                 Finished = true;

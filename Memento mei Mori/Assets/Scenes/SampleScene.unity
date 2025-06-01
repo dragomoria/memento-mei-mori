@@ -1569,6 +1569,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkullPrefab: {fileID: 7432723133000299312, guid: 1418e9efa3500a44dbd28a3773c30f92, type: 3}
   Spawn: {fileID: 112596776}
+  SlashLinePrefab: {fileID: 2637155887798495240, guid: 068d8c8e2f9c27b4894bdb1050422241, type: 3}
+  SlashWarkningDuration: 0.5
+  SlashDuration: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
