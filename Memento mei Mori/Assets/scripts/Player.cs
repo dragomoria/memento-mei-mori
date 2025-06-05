@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,9 @@ public class Player : MonoBehaviour
     public SpawnPickupBehavior pawn;
     private bool FeatherStatus;
     private bool curStatus;
+
+
+    private bool isInvincible = false;
 
     void Start()
     {
@@ -45,29 +49,14 @@ public class Player : MonoBehaviour
         SceneManager.LoadScene("GoodEnding");
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Harmful")
-        {
-            health--;
-            FeatherCounter.instance.DecreaseFeathers(1);
-        }
-
-        if (health <= 0)
-        {
-            Dead();
-        }
-
-        if (health >= 20)
-        {
-            WinTheGame();
-        }
-    }
-
     //add response to damage by extracting func of getting damage from OnCollisionEnter2D and getDamage method and add there effetcs visual and sound
 
     public void getDamage()
     {
+        if (isInvincible)
+            return;
+        else 
+            StartCoroutine(InvincibilityFrames(1f));
         health--;
         FeatherCounter.instance.DecreaseFeathers(1);
 
@@ -80,9 +69,15 @@ public class Player : MonoBehaviour
         {
             WinTheGame();
         }
-        ;
+
     }
 
+    IEnumerator InvincibilityFrames(float duration)
+    {
+        isInvincible = true;
+        yield return new WaitForSeconds(duration);
+        isInvincible = false;
+    }
 
     //invis frames
 
