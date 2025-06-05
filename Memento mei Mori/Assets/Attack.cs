@@ -15,8 +15,8 @@ public class Attack : MonoBehaviour
     private int AttackID;
     private SkullBehavior currentSkull;
 
-
     public GameObject SlashLinePrefab;
+    public GameObject SlashFRPrefab;
 
 
 
@@ -24,21 +24,27 @@ public class Attack : MonoBehaviour
     // expose to unity editor 
     [Header("Attack Settings")]
     [Tooltip("Duration of the slash warning before damage is applied.")]
-    [SerializeField] private float SlashWarningDuration = .75f;
+    [SerializeField] private float SlashWarningDuration = 1f;
 
     [TooltipAttribute("Duration the slash visual stays on screen.")]
-    [SerializeField] private float SlashVisualDuration = 1f;
+    [SerializeField] private float SlashVisualDuration = 2.5f;
 
     [Tooltip("Delay time between attacks.")]
     [SerializeField] private float dealayTime = 2.5f;
-  
-    
+
+    [SerializeField] private GameObject magicAttack;
+    [SerializeField] private GameObject slashAttack;
+    [SerializeField] private GameObject circle;
     
 
 
     private void SkullAttack()
     {
+        //slashAttack.SetActive(false);
+
         SkullPrefab = SkullBehavior.Instantiate(SkullPrefab, Spawn.position, transform.rotation);
+
+        //slashAttack.SetActive(true);
     }
 
     private void Slash()
@@ -46,10 +52,11 @@ public class Attack : MonoBehaviour
         float ver = Random.Range(-3f, 3f);
         float hor = Random.Range(-4F, 0F);
         
-        
+        //magicAttack.SetActive(false);
+        //slashAttack.SetActive(true);
         
         //horizontal slash
-        GameObject hLine = Instantiate(SlashLinePrefab, new Vector3(ver, hor, 0), Quaternion.identity); // l52 l58 i l70-71 dodaj efekt visualny i dźwiekowy 
+        GameObject hLine = Instantiate(SlashLinePrefab, new Vector3(ver, hor, 0), Quaternion.identity); // l52 l58 i l70-71 dodaj efekt visualny i dzwiekowy 
         hLine.transform.localScale = new Vector3(30f, 0.75f, 1f);
         Destroy(hLine, SlashVisualDuration);
 
@@ -61,10 +68,17 @@ public class Attack : MonoBehaviour
 
         StartCoroutine(ApplayDamage(new Vector3(ver, hor, 0)));
 
+        //slashAttack.SetActive(false);
+        //magicAttack.SetActive(true);
+        
     }
 
     private void DiagonalSlash()
     {
+        //magicAttack.SetActive(false);
+        //slashAttack.SetActive(true);
+
+
         Vector3 centre = Spawn.position;
 
         GameObject dLine1 = Instantiate(SlashLinePrefab, centre, quaternion.Euler(0, 0, 75f));
@@ -76,14 +90,25 @@ public class Attack : MonoBehaviour
         Destroy(dLine2, SlashVisualDuration);
 
 
-        StartCoroutine(ApplayDamage(centre, angle: 45f));
-        StartCoroutine(ApplayDamage(centre, angle: -45f));
+        StartCoroutine(ApplayDamage(centre, angle: 75f));
+        StartCoroutine(ApplayDamage(centre, angle: -75f));
+
+        //slashAttack.SetActive(false);
+        //magicAttack.SetActive(true);
     }
 
 
     IEnumerator ApplayDamage(Vector3 pos, float angle)
     {
         yield return new WaitForSeconds(SlashWarningDuration);
+
+        GameObject slashFR = Instantiate(SlashFRPrefab, pos, quaternion.Euler(0f,0f,angle));
+        GameObject slashFR2 = Instantiate(SlashFRPrefab, pos, quaternion.Euler(0f,0f,angle));
+
+        yield return new WaitForSeconds(0.5f);
+
+        Destroy(slashFR);
+        Destroy(slashFR2);
 
         Vector2 dSize = new Vector2(30f, 0.75f);
         Collider2D[] hitCollider = Physics2D.OverlapBoxAll(pos, dSize, angle);
@@ -98,6 +123,14 @@ public class Attack : MonoBehaviour
     {
         yield return new WaitForSeconds(SlashWarningDuration);
 
+        GameObject slashFR = Instantiate(SlashFRPrefab, pos, quaternion.identity);
+        GameObject slashFR2 = Instantiate(SlashFRPrefab, pos, quaternion.identity);
+        slashFR.transform.rotation *= Quaternion.Euler(0, 0, 90);
+
+        yield return new WaitForSeconds(0.5f);
+
+        Destroy(slashFR);
+        Destroy(slashFR2);
 
         Collider2D[] hHitCollider = Physics2D.OverlapBoxAll(pos, new Vector2(30f, 0.75f), 0f);
         Collider2D[] vHitCollider = Physics2D.OverlapBoxAll(pos, new Vector2(30f, 0.75f), 90f);
@@ -112,6 +145,7 @@ public class Attack : MonoBehaviour
 
     void Start()
     {
+        circle.SetActive(false);
         StartCoroutine(AttackChoice());
     }
 
@@ -119,29 +153,29 @@ public class Attack : MonoBehaviour
     {
         while (true)
         {
-            AttackID = 3;
-            //Random.Range(0, 4); // add checking if previous attack was already rolled 
+            AttackID = Random.Range(0, 5);
+            // add checking if previous attack was already rolled
+
             yield return new WaitForSeconds(dealayTime);
 
             if (currentSkull == null || currentSkull.GetFinished())
             {
-                if (AttackID == 0)
+                if (AttackID <= 1)
                 {
-
-
+                    circle.SetActive(true);
+                    yield return new WaitForSeconds(0.25f);
+                    circle.SetActive(false);
                     currentSkull = SkullBehavior.Instantiate(SkullPrefab, Spawn.position, transform.rotation);
                 }
-                else if (AttackID == 1)
+                else if (AttackID <= 3)
                 {
                     Slash();
-                    // DiagonalSlash();
                 }
-                else if (AttackID == 2)
+                /*else if (AttackID == 4)
                 {
                     DiagonalSlash();
-                    // DiagonalSlash();
-                }
-                else if (AttackID == 3)
+                }*/
+                else if (AttackID == 4)
                 {
                     for (int i = 0; i < 4; i++)
                     {
