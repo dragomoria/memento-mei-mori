@@ -7,6 +7,7 @@ using Vector3 = UnityEngine.Vector3;
 using Vector2 = UnityEngine.Vector2;
 using Unity.Mathematics;
 using Random = UnityEngine.Random;
+using Unity.VisualScripting;
 
 public class Attack : MonoBehaviour
 {
@@ -19,8 +20,8 @@ public class Attack : MonoBehaviour
     
     public AttackType attackType;
 
-    public SkullBehavior SkullPrefab;
-    public Transform Spawn;
+    
+
     private int AttackID;
     private SkullBehavior currentSkull;
 
@@ -46,7 +47,8 @@ public class Attack : MonoBehaviour
     [SerializeField] private GameObject magicAttack;
     [SerializeField] private GameObject slashAttack;
     [SerializeField] private GameObject circle;
-
+    [SerializeField] private Transform Spawn;
+    [SerializeField] private SkullBehavior skullPrefab;
 
     private void Start()
     {
@@ -64,8 +66,9 @@ public class Attack : MonoBehaviour
     {
         attackType = AttackType.magic;
         spriteHandler.showMagicAttack();
-        SkullPrefab = SkullBehavior.Instantiate(SkullPrefab, Spawn.position, transform.rotation);
-        StartCoroutine(hideGameObject(attackType, 5f));
+        currentSkull = Instantiate(skullPrefab, Spawn.position, transform.rotation);
+        if (currentSkull.Finished)
+            StartCoroutine(hideGameObject(attackType, 0f));
 
         
     }
@@ -181,39 +184,32 @@ public class Attack : MonoBehaviour
     {
         while (true)
         {
-            // AttackID = 9;
-            AttackID = Random.Range(0, 5);
-            // add checking if previous attack was already rolled
-
+            AttackID = Random.Range(1, 5);
             yield return new WaitForSeconds(dealayTime);
+            if (AttackID <= 1){
 
-            if (currentSkull == null || currentSkull.GetFinished())
-            {
-                if (AttackID <= 1)
-                {
-                    circle.SetActive(true);
-                    yield return new WaitForSeconds(0.25f);
-                    circle.SetActive(false);
-                    SkullAttack();
-                }
-                else if (AttackID <= 3)
+                spriteHandler.showSkullAttack();
+                yield return new WaitForSeconds(0.25f);
+                SkullAttack();
+            }
+            else if (AttackID <= 3){
+
+                Slash();
+            }
+            else if (AttackID == 9){
+
+                DiagonalSlash();
+            }
+            else if (AttackID == 4){
+
+                for (int i = 0; i < 4; i++)
                 {
                     Slash();
+                    yield return new WaitForSeconds(0.25f);
                 }
-                else if (AttackID == 9)
-                {
-                    DiagonalSlash();
-                }
-                else if (AttackID == 4)
-                {
-                    for (int i = 0; i < 4; i++)
-                    {
-                        Slash();
-                        yield return new WaitForSeconds(0.25f);
-                    }
-                    yield return new WaitForSeconds(1f);
-                }
+                yield return new WaitForSeconds(1f);
             }
+            
         }
     }
 

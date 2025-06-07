@@ -26,12 +26,11 @@ public class FeatherBehavior : MonoBehaviour
         }
 
     }
-
- 
+    
       
-      private void OnCollisionEnter2D(Collision2D collision)
+      private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             Picked = true;
             FeatherCounter.instance.IncreaseFeathers(1);

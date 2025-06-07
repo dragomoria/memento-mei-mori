@@ -4,6 +4,7 @@ public class SpriteHandler : MonoBehaviour
 {
     GameObject magicAttack;
     GameObject slashAttack;
+    GameObject skullAttack;
     public static SpriteHandler instance { get; private set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,13 +20,39 @@ public class SpriteHandler : MonoBehaviour
     {
         magicAttack = GameObject.Find("Magic Attack");
         slashAttack = GameObject.Find("Slash");
-        hideBoth();
+        skullAttack = GameObject.Find("Skull Attack");
+        hideAll();
     }
 
-    private void hideBoth()
+    private void hideAll()
     {
         hideSlash();
         hideMagicAttack();
+        hideSkullAttack();
+    }
+    
+
+    public void hideSkullAttack()
+    {
+        if (skullAttack != null)
+        {
+            skullAttack.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("Skull Attack GameObject not found!");
+        }
+    }
+    public void showSkullAttack()
+    {
+        if (skullAttack != null)
+        {
+            skullAttack.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("Skull Attack GameObject not found!");
+        }
     }
 
     public void hideSlash()
@@ -34,7 +61,7 @@ public class SpriteHandler : MonoBehaviour
         {
             slashAttack.SetActive(false);
         }
-        else 
+        else
         {
             Debug.LogWarning("Slash Attack GameObject not found!");
         }

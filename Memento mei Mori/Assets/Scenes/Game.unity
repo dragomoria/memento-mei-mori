@@ -908,6 +908,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &943172528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 943172530}
+  - component: {fileID: 943172529}
+  m_Layer: 0
+  m_Name: SpriteManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &943172529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943172528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b0f3bfb0fce0541b2f29dfdbcf641b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &943172530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943172528}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.19574, y: 0.39931, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &955811185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1029,7 +1073,7 @@ GameObject:
   - component: {fileID: 1147390753}
   - component: {fileID: 1147390752}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Skull Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1206,7 +1250,7 @@ GameObject:
   - component: {fileID: 1210721659}
   m_Layer: 0
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Border
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1341,7 +1385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FeatherPrefab: {fileID: 681196056599404957, guid: e5f8c76fda4766c41a973357ae9365eb, type: 3}
-  SpawnOffset: {fileID: 1145875219}
 --- !u!1 &1263436412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,8 +1822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a202128e1f9c9a499e7f34b62fb8252, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SkullPrefab: {fileID: 7432723133000299312, guid: 1418e9efa3500a44dbd28a3773c30f92, type: 3}
-  Spawn: {fileID: 112596776}
+  attackType: 0
+  skullPrefab: {fileID: 7432723133000299312, guid: 1418e9efa3500a44dbd28a3773c30f92, type: 3}
   SlashLinePrefab: {fileID: 2637155887798495240, guid: 068d8c8e2f9c27b4894bdb1050422241, type: 3}
   SlashFRPrefab: {fileID: 7758732933567427711, guid: 440f461d33138fc4e9f129b2a9999124, type: 3}
   SlashWarningDuration: 0.75
@@ -1789,6 +1832,7 @@ MonoBehaviour:
   magicAttack: {fileID: 910577390}
   slashAttack: {fileID: 1889845122}
   circle: {fileID: 1147390751}
+  Spawn: {fileID: 112596776}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1803,3 +1847,4 @@ SceneRoots:
   - {fileID: 131617889}
   - {fileID: 955811188}
   - {fileID: 1263436414}
+  - {fileID: 943172530}
