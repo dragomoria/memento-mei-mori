@@ -27,22 +27,13 @@ public class FeatherBehavior : MonoBehaviour
 
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            Picked = true;
-
-            Destroy(gameObject);
-        }
-    }*/
+ 
       
       private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             Picked = true;
-            collision.gameObject.GetComponent<Player>().HealthUp();
             FeatherCounter.instance.IncreaseFeathers(1);
             Destroy(gameObject);
         }

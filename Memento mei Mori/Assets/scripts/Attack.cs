@@ -146,7 +146,7 @@ public class Attack : MonoBehaviour
     void Start()
     {
         circle.SetActive(false);
-        StartCoroutine(AttackChoice());
+        // StartCoroutine(AttackChoice());
     }
 
     IEnumerator AttackChoice()

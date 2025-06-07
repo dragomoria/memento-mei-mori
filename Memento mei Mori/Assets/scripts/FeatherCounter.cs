@@ -4,10 +4,10 @@ using TMPro;
 public class FeatherCounter : MonoBehaviour
 {
 
-    public static FeatherCounter instance;
+    public static FeatherCounter instance { get; private set; }
 
     public TMP_Text featherText;
-    public int currentFeathers = 50;
+    public int currentFeathers { get; private set; } = 10;
 
     void Awake()
     {

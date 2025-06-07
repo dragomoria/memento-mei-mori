@@ -4,12 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    private int health;
     public FeatherBehavior FeatherPrefab;
     public SpawnPickupBehavior pawn;
     private bool FeatherStatus;
     private bool curStatus;
-
+    private FeatherCounter featherManger;
 
     private bool isInvincible = false;
 
@@ -17,7 +16,7 @@ public class Player : MonoBehaviour
     {
         FeatherStatus = false;
         curStatus = false;
-        health = 50;
+        featherManger = FeatherCounter.instance;
     }
 
     void Update()
@@ -27,7 +26,7 @@ public class Player : MonoBehaviour
 
     public void HealthUp()
     {
-        health++;
+        featherManger.IncreaseFeathers(1);;
     }
 
     private void Dead()
@@ -48,9 +47,10 @@ public class Player : MonoBehaviour
     {
         if (isInvincible)
             return;
-        else 
+        else
             StartCoroutine(InvincibilityFrames(1f));
         
+        int health = featherManger.currentFeathers;
         health--;
         FeatherCounter.instance.DecreaseFeathers(1);
 
