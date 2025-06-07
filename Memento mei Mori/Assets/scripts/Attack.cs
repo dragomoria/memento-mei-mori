@@ -84,8 +84,8 @@ public class Attack : MonoBehaviour
         GameObject dLine1 = Instantiate(SlashLinePrefab, centre, quaternion.Euler(0, 0, 75f));
         GameObject dLine2 = Instantiate(SlashLinePrefab, centre, quaternion.Euler(0, 0, -75f));
 
-        dLine1.transform.localScale = new Vector3(35f, 0.75f, 1f);
-        dLine2.transform.localScale = new Vector3(35f, 0.75f, 1f);
+        dLine1.transform.localScale = new Vector3(30f, 0.75f, 1f);
+        dLine2.transform.localScale = new Vector3(30f, 0.75f, 1f);
         Destroy(dLine1, SlashVisualDuration);
         Destroy(dLine2, SlashVisualDuration);
 
@@ -110,7 +110,7 @@ public class Attack : MonoBehaviour
         Destroy(slashFR);
         Destroy(slashFR2);
 
-        Vector2 dSize = new Vector2(30f, 0.75f);
+        Vector2 dSize = new Vector2(.5f, 30f);
         Collider2D[] hitCollider = Physics2D.OverlapBoxAll(pos, dSize, angle);
 
         foreach (var hit in hitCollider)
@@ -153,7 +153,8 @@ public class Attack : MonoBehaviour
     {
         while (true)
         {
-            AttackID = Random.Range(0, 5);
+            AttackID = 9;
+            //= Random.Range(0, 5);
             // add checking if previous attack was already rolled
 
             yield return new WaitForSeconds(dealayTime);
@@ -171,10 +172,10 @@ public class Attack : MonoBehaviour
                 {
                     Slash();
                 }
-                /*else if (AttackID == 4)
+                else if (AttackID == 9)
                 {
                     DiagonalSlash();
-                }*/
+                }
                 else if (AttackID == 4)
                 {
                     for (int i = 0; i < 4; i++)

@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 51220013}
   - component: {fileID: 51220017}
   - component: {fileID: 51220018}
+  - component: {fileID: 51220019}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -256,6 +257,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FeatherPrefab: {fileID: 681196056599404957, guid: e5f8c76fda4766c41a973357ae9365eb, type: 3}
   pawn: {fileID: 1210721659}
+--- !u!114 &51220019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 51220012}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fef96c01bf60c145b806bcaefa770b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gizmoColor: {r: 0, g: 1, b: 0.8911872, a: 1}
 --- !u!1 &112596775
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0055, y: -0.0031}
+  m_AnchoredPosition: {x: 0.04, y: -0.03}
   m_SizeDelta: {x: 20.4846, y: 10.0489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &219995713

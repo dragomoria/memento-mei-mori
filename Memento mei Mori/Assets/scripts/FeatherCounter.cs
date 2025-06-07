@@ -7,7 +7,7 @@ public class FeatherCounter : MonoBehaviour
     public static FeatherCounter instance;
 
     public TMP_Text featherText;
-    public int currentFeathers = 1;
+    public int currentFeathers = 50;
 
     void Awake()
     {

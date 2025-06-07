@@ -17,19 +17,12 @@ public class Player : MonoBehaviour
     {
         FeatherStatus = false;
         curStatus = false;
-        health = 1;
+        health = 50;
     }
 
     void Update()
     {
         curStatus = pawn.isSpawng;
-
-        /*if(curStatus == true)
-        {
-        FeatherStatus = pawn.pickStat;
-        print(FeatherStatus);
-        HealthUp();
-        }*/
     }
 
     public void HealthUp()
@@ -57,6 +50,7 @@ public class Player : MonoBehaviour
             return;
         else 
             StartCoroutine(InvincibilityFrames(1f));
+        
         health--;
         FeatherCounter.instance.DecreaseFeathers(1);
 
@@ -80,5 +74,7 @@ public class Player : MonoBehaviour
     }
 
     //invis frames
+
+
 
 }
