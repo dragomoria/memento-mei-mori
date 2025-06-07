@@ -10,6 +10,15 @@ using Random = UnityEngine.Random;
 
 public class Attack : MonoBehaviour
 {
+
+    public enum AttackType
+    {
+        slash,
+        magic,
+    }
+    
+    public AttackType attackType;
+
     public SkullBehavior SkullPrefab;
     public Transform Spawn;
     private int AttackID;
@@ -17,6 +26,8 @@ public class Attack : MonoBehaviour
 
     public GameObject SlashLinePrefab;
     public GameObject SlashFRPrefab;
+
+    private SpriteHandler spriteHandler;
 
 
 
@@ -35,25 +46,37 @@ public class Attack : MonoBehaviour
     [SerializeField] private GameObject magicAttack;
     [SerializeField] private GameObject slashAttack;
     [SerializeField] private GameObject circle;
-    
 
+
+    private void Start()
+    {
+        spriteHandler = SpriteHandler.instance;
+        if (spriteHandler == null)
+        {
+            Debug.LogError("SpriteHandler instance not found!");
+            return;
+        }
+        StartCoroutine(AttackChoice());
+    }
+        
 
     private void SkullAttack()
     {
-        //slashAttack.SetActive(false);
-
+        attackType = AttackType.magic;
+        spriteHandler.showMagicAttack();
         SkullPrefab = SkullBehavior.Instantiate(SkullPrefab, Spawn.position, transform.rotation);
+        StartCoroutine(hideGameObject(attackType, 5f));
 
-        //slashAttack.SetActive(true);
+        
     }
 
     private void Slash()
     {
+        attackType = AttackType.slash;
+        spriteHandler.showSlash();
         float ver = Random.Range(-3f, 3f);
         float hor = Random.Range(-4F, 0F);
         
-        //magicAttack.SetActive(false);
-        //slashAttack.SetActive(true);
         
         //horizontal slash
         GameObject hLine = Instantiate(SlashLinePrefab, new Vector3(ver, hor, 0), Quaternion.identity); // l52 l58 i l70-71 dodaj efekt visualny i dzwiekowy 
@@ -67,17 +90,15 @@ public class Attack : MonoBehaviour
         Destroy(vLine, SlashVisualDuration);
 
         StartCoroutine(ApplayDamage(new Vector3(ver, hor, 0)));
+        StartCoroutine(hideGameObject(attackType, 5f));
 
-        //slashAttack.SetActive(false);
-        //magicAttack.SetActive(true);
         
     }
 
     private void DiagonalSlash()
     {
-        //magicAttack.SetActive(false);
-        //slashAttack.SetActive(true);
-
+        attackType = AttackType.slash;
+        spriteHandler.showSlash();
 
         Vector3 centre = Spawn.position;
 
@@ -91,12 +112,24 @@ public class Attack : MonoBehaviour
 
 
         StartCoroutine(ApplayDamage(centre, angle: 75f));
-        StartCoroutine(ApplayDamage(centre, angle: -75f));
-
-        //slashAttack.SetActive(false);
-        //magicAttack.SetActive(true);
+        StartCoroutine(ApplayDamage(centre, angle: -75f)); 
+        StartCoroutine(hideGameObject(attackType, 2.5f));
     }
 
+
+    IEnumerator hideGameObject(AttackType attack,float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        switch (attack)
+        {
+            case AttackType.slash:
+                spriteHandler.hideSlash();
+                break;
+            case AttackType.magic:
+                spriteHandler.hideMagicAttack();
+                break;
+        }
+    }
 
     IEnumerator ApplayDamage(Vector3 pos, float angle)
     {
@@ -143,18 +176,13 @@ public class Attack : MonoBehaviour
         
     }
 
-    void Start()
-    {
-        circle.SetActive(false);
-        // StartCoroutine(AttackChoice());
-    }
 
     IEnumerator AttackChoice()
     {
         while (true)
         {
-            AttackID = 9;
-            //= Random.Range(0, 5);
+            // AttackID = 9;
+            AttackID = Random.Range(0, 5);
             // add checking if previous attack was already rolled
 
             yield return new WaitForSeconds(dealayTime);
@@ -166,7 +194,7 @@ public class Attack : MonoBehaviour
                     circle.SetActive(true);
                     yield return new WaitForSeconds(0.25f);
                     circle.SetActive(false);
-                    currentSkull = SkullBehavior.Instantiate(SkullPrefab, Spawn.position, transform.rotation);
+                    SkullAttack();
                 }
                 else if (AttackID <= 3)
                 {
