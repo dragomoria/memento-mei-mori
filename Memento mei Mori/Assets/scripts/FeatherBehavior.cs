@@ -20,7 +20,7 @@ public class FeatherBehavior : MonoBehaviour
     {
         while(Picked == false)
         {
-                yield return new WaitForSeconds(5);
+                yield return new WaitForSeconds(5f);
                 Destroy(gameObject);
                 yield break;
         }
