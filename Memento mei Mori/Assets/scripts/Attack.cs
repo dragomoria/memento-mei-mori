@@ -192,11 +192,11 @@ public class Attack : MonoBehaviour
                 yield return new WaitForSeconds(0.25f);
                 SkullAttack();
             }
-            else if (AttackID <= 3){
+            else if (AttackID == 3){
 
                 Slash();
             }
-            else if (AttackID == 9){
+            else if (AttackID == 2){
 
                 DiagonalSlash();
             }
