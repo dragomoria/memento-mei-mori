@@ -6,7 +6,6 @@ public class Player : MonoBehaviour
 {
     public FeatherBehavior FeatherPrefab;
     public SpawnPickupBehavior pawn;
-    private bool FeatherStatus;
     private bool curStatus;
     private FeatherCounter featherManger;
 
@@ -14,7 +13,6 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        FeatherStatus = false;
         curStatus = false;
         featherManger = FeatherCounter.instance;
     }
