@@ -65,10 +65,27 @@ public class Attack : MonoBehaviour
         int AttackID;
         while (true)
         {
-            AttackID = Random.Range(0, 3); // randomise it 
-            attackType = mapIDToAttackType(AttackID);
-            attackManager.selectAttack(attackType);
-            yield return new WaitForSeconds(dealayTime); // can randomise it based on previous attack, or dependin on feather count
+            //add a flag to check if the attack finished, dont allow for room for breath
+            // AttackID = Random.Range(0, 3); // randomise it 
+            // attackType = mapIDToAttackType(AttackID);
+            for (int i = 0; i < 7; i++)
+            {
+                attackManager.selectAttack(AttackType.slash, new AttackParams
+                {
+                    position = null,
+                    rotation = Random.Range(-20f, 20f),
+                    frequency = Random.Range(0.5f, 1.5f),
+                    duration = Random.Range(1f, 2f),
+                    speed = Random.Range(1f, 3f),
+                    telegraphDuration = 1f,
+                    attackDuration = 0.2f,
+                    spriteDuration = 2.5f,
+                    attackType = this.attackType
+                });
+                yield return new WaitForSeconds(Random.Range(0.05f, 0.3f)); // can randomise it based on previous attack, or dependin on feather count
+            }
+
+            yield return new WaitForSeconds(5f); // can randomise it based on previous attack, or dependin on feather count
         }
     }
 

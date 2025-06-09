@@ -1544,11 +1544,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteHandler: {fileID: 943172529}
-  SlashFRPrefab: {fileID: 7758732933567427711, guid: 440f461d33138fc4e9f129b2a9999124, type: 3}
-  SlashLinePrefab: {fileID: 2637155887798495240, guid: 068d8c8e2f9c27b4894bdb1050422241, type: 3}
-  SlashVisualDuration: 2.5
-  SlashWarningDuration: 1
-  Spawn: {fileID: 112596776}
+  slashHitboxPrefab: {fileID: 7758732933567427711, guid: 440f461d33138fc4e9f129b2a9999124, type: 3}
+  slashLinePrefab: {fileID: 2637155887798495240, guid: 068d8c8e2f9c27b4894bdb1050422241, type: 3}
 --- !u!4 &1636458599
 Transform:
   m_ObjectHideFlags: 0
