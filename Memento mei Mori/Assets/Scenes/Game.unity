@@ -1143,7 +1143,7 @@ Transform:
   m_GameObject: {fileID: 1147390751}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.09, y: -1.91, z: 0}
+  m_LocalPosition: {x: 0.09, y: -2.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1319,8 +1319,8 @@ Transform:
   m_GameObject: {fileID: 1210721654}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: -2.0623, z: 0}
-  m_LocalScale: {x: 7.3125, y: 4.2502337, z: 0}
+  m_LocalPosition: {x: -0.0597, y: -2.1667, z: 0}
+  m_LocalScale: {x: 6.880443, y: 3.743235, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1145875219}
@@ -1546,6 +1546,8 @@ MonoBehaviour:
   spriteHandler: {fileID: 943172529}
   slashHitboxPrefab: {fileID: 7758732933567427711, guid: 440f461d33138fc4e9f129b2a9999124, type: 3}
   slashLinePrefab: {fileID: 2637155887798495240, guid: 068d8c8e2f9c27b4894bdb1050422241, type: 3}
+  skullPrefab: {fileID: 7071836723073286084, guid: 1418e9efa3500a44dbd28a3773c30f92, type: 3}
+  projectilePrefab: {fileID: 2939186334494954127, guid: bba1e721cd282194790d0694fa7bb26f, type: 3}
 --- !u!4 &1636458599
 Transform:
   m_ObjectHideFlags: 0

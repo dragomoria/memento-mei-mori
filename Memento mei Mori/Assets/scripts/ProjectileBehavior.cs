@@ -7,7 +7,7 @@ public class ProjectileBehavior : MonoBehaviour
 
     private void Update()
     {
-        transform.position += -transform.up * Time.deltaTime * Speed;
+        // transform.position += -transform.up * Time.deltaTime * Speed;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -18,7 +18,7 @@ public class ProjectileBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else destroyAfterTime(2.5f);
+        else destroyAfterTime(1.5f);
     }
     
     IEnumerator destroyAfterTime(float time)

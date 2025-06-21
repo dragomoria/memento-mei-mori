@@ -8,6 +8,7 @@ using Vector2 = UnityEngine.Vector2;
 using Unity.Mathematics;
 using Random = UnityEngine.Random;
 using Unity.VisualScripting;
+using UnityEngine.Rendering;
 
 public enum AttackType
     {
@@ -22,6 +23,8 @@ public class Attack : MonoBehaviour
     private SpriteHandler spriteHandler;
 
 
+    private bool readyToAttack;
+
 
 
     // expose to unity editor 
@@ -32,6 +35,12 @@ public class Attack : MonoBehaviour
     [SerializeField] private float dealayTime = 2.5f;
     [Tooltip("Delay time between attacks.")]
     [SerializeField] private AttackHandler attackManager;
+
+
+    private void Awake()
+    {
+        readyToAttack = true;
+    }
 
     private void Start()
     {
@@ -60,33 +69,61 @@ public class Attack : MonoBehaviour
         }
     }
 
+
     IEnumerator AttackChoice()
     {
-        int AttackID;
+        // int AttackID;
         while (true)
         {
-            //add a flag to check if the attack finished, dont allow for room for breath
-            // AttackID = Random.Range(0, 3); // randomise it 
-            // attackType = mapIDToAttackType(AttackID);
-            for (int i = 0; i < 7; i++)
+            while (!readyToAttack)
             {
-                attackManager.selectAttack(AttackType.slash, new AttackParams
-                {
-                    position = null,
-                    rotation = Random.Range(-20f, 20f),
-                    frequency = Random.Range(0.5f, 1.5f),
-                    duration = Random.Range(1f, 2f),
-                    speed = Random.Range(1f, 3f),
-                    telegraphDuration = 1f,
-                    attackDuration = 0.2f,
-                    spriteDuration = 2.5f,
-                    attackType = this.attackType
-                });
-                yield return new WaitForSeconds(Random.Range(0.05f, 0.3f)); // can randomise it based on previous attack, or dependin on feather count
+                
             }
+            //add a flag to check if the attack finished, dont allow for room for breath
+                // AttackID = Random.Range(0, 3); // randomise it 
+                // attackType = mapIDToAttackType(AttackID);
+                // for (int i = 0; i < 7; i++)
+                // {
+                //     // attackManager.selectAttack(AttackType.slash, new AttackParams
+                //     // {
+                //     //     position = null,
+                //     //     rotation = Random.Range(-20f, 20f),
+                //     //     frequency = Random.Range(0.5f, 1.5f),
+                //     //     duration = Random.Range(1f, 2f),
+                //     //     speed = Random.Range(1f, 3f),
+                //     //     telegraphDuration = 1f,
+                //     //     attackDuration = 0.2f,
+                //     //     spriteDuration = 2.5f,
+                //     //     attackType = this.attackType
+                //     // });
+
+
+                //     yield return new WaitForSeconds(Random.Range(0.05f, 0.3f)); // can randomise it based on previous attack, or dependin on feather count
+                // }
+
+                attackManager.selectAttack(AttackType.skull, new AttackParams());
 
             yield return new WaitForSeconds(5f); // can randomise it based on previous attack, or dependin on feather count
+            readyToAttack = false;
         }
+    }
+
+
+    private void onAttackFinished()
+    {
+        readyToAttack = true;
+        Debug.Log("successfully run the shit");
+    }
+
+    void OnEnable()
+    {
+        GlobalAttackEvent.onAttackFinished += onAttackFinished;
+
+    }
+    void OnDisable()
+    {
+        
+        GlobalAttackEvent.onAttackFinished -= onAttackFinished;
     }
 
 }
