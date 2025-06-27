@@ -11,10 +11,11 @@ using Unity.VisualScripting;
 using UnityEngine.Rendering;
 
 public enum AttackType
-    {
-        slash,
-        diagonalSlash,
-        skull,
+{
+    slash,
+    diagonalSlash,
+    skull,
+        spikes,
     }
 
 public class Attack : MonoBehaviour
@@ -76,26 +77,27 @@ public class Attack : MonoBehaviour
         {
             if (!readyToAttack)
             {
+                // Debug.Log("not ready to attack");
                 yield return new WaitForSeconds(0.5f);
                 continue;
             }
-
-            attackManager.selectAttack(AttackType.skull, new AttackParams());
-            attackManager.selectAttack(AttackType.slash, new AttackParams
-            {
-                position = null,
-                rotation = Random.Range(-20f, 20f),
-                frequency = Random.Range(0.5f, 1.5f),
-                duration = Random.Range(1f, 2f),
-                speed = Random.Range(1f, 3f),
-                telegraphDuration = 1f,
-                attackDuration = 0.2f,
-                spriteDuration = 2.5f,
-                attackType = this.attackType
-            });
+            attackManager.selectAttack(AttackType.spikes, new AttackParams());
+            // attackManager.selectAttack(AttackType.skull, new AttackParams());
+            // attackManager.selectAttack(AttackType.slash, new AttackParams
+            // {
+            //     position = null,
+            //     rotation = Random.Range(-20f, 20f),
+            //     frequency = Random.Range(0.5f, 1.5f),
+            //     duration = Random.Range(1f, 2f),
+            //     speed = Random.Range(1f, 3f),
+            //     telegraphDuration = 1f,
+            //     attackDuration = 0.2f,
+            //     spriteDuration = 2.5f,
+            //     attackType = this.attackType
+            // });
 
             readyToAttack = false;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
         }
     }
 

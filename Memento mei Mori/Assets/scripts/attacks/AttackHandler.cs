@@ -13,6 +13,7 @@ public class AttackHandler : MonoBehaviour
     [SerializeField] private GameObject slashLinePrefab;
     [SerializeField] private GameObject skullPrefab;
     [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private GameObject spikePrefab;
 
     AttackType attackType;
     private Dictionary<AttackType, IAttackPattern> patternMap;
@@ -22,7 +23,8 @@ public class AttackHandler : MonoBehaviour
         patternMap = new Dictionary<AttackType, IAttackPattern>
         {
             { AttackType.slash, new Slash(slashLinePrefab, slashHitboxPrefab) },
-            { AttackType.skull, new Skull(skullPrefab, projectilePrefab)}
+            { AttackType.skull, new Skull(skullPrefab, projectilePrefab)},
+            {AttackType.spikes, new Spike(spikePrefab)}
         };
     }
 
