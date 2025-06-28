@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SpriteHandler : MonoBehaviour
@@ -30,7 +31,7 @@ public class SpriteHandler : MonoBehaviour
         hideMagicAttack();
         hideSkullAttack();
     }
-    
+
 
     public void hideSkullAttack()
     {
@@ -72,7 +73,7 @@ public class SpriteHandler : MonoBehaviour
         {
             slashAttack.SetActive(true);
         }
-        else 
+        else
         {
             Debug.LogWarning("Slash Attack GameObject not found!");
         }
@@ -83,7 +84,7 @@ public class SpriteHandler : MonoBehaviour
         {
             magicAttack.SetActive(false);
         }
-        else 
+        else
         {
             Debug.LogWarning("Magic Attack GameObject not found!");
         }
@@ -94,12 +95,23 @@ public class SpriteHandler : MonoBehaviour
         {
             magicAttack.SetActive(true);
         }
-        else 
+        else
         {
             Debug.LogWarning("Magic Attack GameObject not found!");
         }
     }
 
+    public IEnumerator moveSpike(GameObject spike, Vector3 start, Vector3 end, float duration) // lerp the movement so it is smoooth
+    {
+        float t = 0;
+        while (t < 1f)
+        {
+            t += Time.deltaTime / duration;
+            spike.transform.position = Vector3.Lerp(start, end, t);
+            yield return null;
+        }
+        
+    }
 
 
 }
