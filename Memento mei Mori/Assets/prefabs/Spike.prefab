@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1211631747297591119}
   - component: {fileID: 8607372999484055764}
   - component: {fileID: 7280722689507776904}
+  - component: {fileID: 6864485333044465863}
   m_Layer: 3
   m_Name: Spike
   m_TagString: Harmful
@@ -153,3 +154,16 @@ CapsuleCollider2D:
   m_Offset: {x: -0.095690265, y: -0.0217401}
   m_Size: {x: 3.7387567, y: 0.99916977}
   m_Direction: 1
+--- !u!114 &6864485333044465863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6952595720004221761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6de915a7a9848d74a92c1273ae1a3e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selfTransform: {fileID: 8399096849500146074}

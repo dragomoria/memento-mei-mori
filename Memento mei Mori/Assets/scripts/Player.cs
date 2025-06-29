@@ -8,6 +8,16 @@ public class Player : MonoBehaviour
     public SpawnPickupBehavior pawn;
     private bool curStatus;
     private FeatherCounter featherManger;
+    
+    [SerializeField]
+    private Transform selfTransform;
+    
+    [SerializeField]
+    private Rigidbody2D playerRb;
+
+    [SerializeField]
+    private PlayerMovement playerMovement;
+    private float knocbackForce = 5f;
 
     private bool isInvincible = false;
 
@@ -46,22 +56,34 @@ public class Player : MonoBehaviour
         if (isInvincible)
             return;
         else
-            StartCoroutine(InvincibilityFrames(1f));
+            StartCoroutine(InvincibilityFrames(.5f));
         
         int health = featherManger.currentFeathers;
         health--;
         FeatherCounter.instance.DecreaseFeathers(1);
-
         if (health <= 0)
         {
             Dead();
         }
-
         if (health >= 20)
         {
             WinTheGame();
         }
+    }
+    public void getDamage(Vector3 directionFrom)
+    {
+        Debug.Log($"Body Type: {playerRb.bodyType}");
 
+        Vector2 knocbackDircetion = (selfTransform.position - directionFrom).normalized;
+        Debug.Log($"applying force towards {knocbackDircetion}");
+
+        playerMovement.applyKnockback();
+        // playerRb.AddForce(knocbackDircetion * knocbackForce, ForceMode2D.Impulse);
+        playerRb.linearVelocity = knocbackDircetion * knocbackForce;
+        
+        if (isInvincible)
+            return;
+        getDamage();
     }
 
     IEnumerator InvincibilityFrames(float duration)

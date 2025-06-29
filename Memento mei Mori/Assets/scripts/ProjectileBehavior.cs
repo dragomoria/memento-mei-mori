@@ -10,7 +10,7 @@ public class ProjectileBehavior : MonoBehaviour
         // transform.position += -transform.up * Time.deltaTime * Speed;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         collision.gameObject.GetComponent<Player>()?.getDamage();
 

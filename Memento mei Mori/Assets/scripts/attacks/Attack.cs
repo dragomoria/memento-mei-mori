@@ -9,13 +9,15 @@ using Unity.Mathematics;
 using Random = UnityEngine.Random;
 using Unity.VisualScripting;
 using UnityEngine.Rendering;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 public enum AttackType
 {
     slash,
     diagonalSlash,
     skull,
-        spikes,
+    spikes,
     }
 
 public class Attack : MonoBehaviour
@@ -25,6 +27,7 @@ public class Attack : MonoBehaviour
 
 
     private bool readyToAttack;
+    private bool spikesReady= true;
 
 
 
@@ -73,16 +76,32 @@ public class Attack : MonoBehaviour
 
     IEnumerator AttackChoice()
     {
+        int attackID = 1;
         while (true)
         {
+            // attackID = Random.Range(1, 3); // swap that with function that has skewness and cannot allow repetitions. 
+            // Debug.Log(attackID);
             if (!readyToAttack)
             {
                 // Debug.Log("not ready to attack");
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.49f);
                 continue;
             }
-            attackManager.selectAttack(AttackType.spikes, new AttackParams());
-            // attackManager.selectAttack(AttackType.skull, new AttackParams());
+            if (attackID == 1 && spikesReady)
+            {
+                attackManager.selectAttack(AttackType.spikes, new AttackParams());
+                spikesReady = false;
+            }
+            else if (!spikesReady && attackID ==1)
+            {
+                yield return new WaitForSeconds(0.49f);
+                // Debug.Log("spikes not ready to attack yet");
+                continue;
+            }
+            if (attackID == 2 )
+            {
+                attackManager.selectAttack(AttackType.skull, new AttackParams());
+            }
             // attackManager.selectAttack(AttackType.slash, new AttackParams
             // {
             //     position = null,
@@ -97,7 +116,7 @@ public class Attack : MonoBehaviour
             // });
 
             readyToAttack = false;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
         }
     }
 
@@ -105,17 +124,21 @@ public class Attack : MonoBehaviour
     private void onAttackFinished()
     {
         readyToAttack = true;
-        Debug.Log("successfully run the shit");
+        // Debug.Log("successfully run the shit");
+    }
+    private void onSpikeReady()
+    {
+        spikesReady = true;
     }
 
     void OnEnable()
     {
         GlobalAttackEvent.onAttackFinished += onAttackFinished;
-
+        GlobalAttackEvent.spikeReady += onSpikeReady;
     }
     void OnDisable()
     {
-        
+        GlobalAttackEvent.spikeReady -= onSpikeReady;
         GlobalAttackEvent.onAttackFinished -= onAttackFinished;
     }
 

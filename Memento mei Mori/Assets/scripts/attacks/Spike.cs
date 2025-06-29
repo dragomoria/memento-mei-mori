@@ -30,7 +30,6 @@ public class Spike : IAttackPattern
 
     public IEnumerator ExecuteAttack(SpriteHandler spriteHandler, AttackParams attackParams)
     {
-        Debug.Log("Staart attack spike");
         yield return spawnWall(Dir.left, attackParams, spriteHandler);
     }
 
@@ -63,14 +62,12 @@ public class Spike : IAttackPattern
                 Debug.Log("Not correct direction of wall of spikes");
                 break;
         }
-
-        Debug.Log("finished spikewall");
-        yield return new WaitForSeconds(1f); // wait until spikes are in plce 
+        yield return new WaitForSeconds(attackParams.telegraphDuration ?? 0.1f); // wait until spikes are in plce 
 
         GlobalAttackEvent.AttackFinished(); // flag that you can start different attack
 
         yield return new WaitForSeconds((float) (attackParams.duration ?? 5f)); // how long does the spikes last for 
-
+        GlobalAttackEvent.SpikeReady();
 
         // cleanup 
         foreach (var spike in spikeList)
