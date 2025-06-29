@@ -18,6 +18,7 @@ public class Skull : IAttackPattern
     public IEnumerator ExecuteAttack(SpriteHandler spriteHandler, AttackParams attackParams)
     {
         Vector3 center = new Vector3(0, -2, 0);
+        spriteHandler.showMagicAttack();
         GameObject skull = Object.Instantiate(skullPrefab, center, quaternion.Euler(0,0,0));
         yield return new WaitForSeconds(attackParams.telegraphDuration ?? 1f);
 
@@ -37,6 +38,7 @@ public class Skull : IAttackPattern
         }
 
         GlobalAttackEvent.AttackFinished();
+        spriteHandler.hideMagicAttack();
         Object.Destroy(skull);
 
 

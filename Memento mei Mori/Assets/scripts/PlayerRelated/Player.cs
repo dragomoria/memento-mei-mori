@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
         if (isInvincible)
             return;
         else
-            StartCoroutine(InvincibilityFrames(.5f));
+            StartCoroutine(InvincibilityFrames(1f));
         
         int health = featherManger.currentFeathers;
         health--;
@@ -79,7 +79,7 @@ public class Player : MonoBehaviour
             WinTheGame();
         }
     }
-    public void getDamage(Vector3 directionFrom)
+    public void getDamage(Vector3 directionFrom, float? knocbackForce)
     {
         Debug.Log($"Body Type: {playerRb.bodyType}");
 
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour
 
         playerMovement.applyKnockback();
         // playerRb.AddForce(knocbackDircetion * knocbackForce, ForceMode2D.Impulse);
-        playerRb.linearVelocity = knocbackDircetion * knocbackForce;
+        playerRb.linearVelocity = knocbackDircetion * (float) (knocbackForce ?? this.knocbackForce);
         
         if (isInvincible)
             return;
