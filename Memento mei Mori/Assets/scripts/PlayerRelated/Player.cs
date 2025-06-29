@@ -20,6 +20,10 @@ public class Player : MonoBehaviour
     private PlayerMovement playerMovement;
     [SerializeField]
     private GameObject damageVFXPrefab;
+    [SerializeField]
+    private CameraShake cameraShake;
+    [SerializeField]
+    private AudioManager audioManager;
 
 
     private float knocbackForce = 5f;
@@ -61,12 +65,16 @@ public class Player : MonoBehaviour
         GameObject vfx = Instantiate(damageVFXPrefab, selfTransform.position, quaternion.identity);
         Destroy(vfx, 2f);
 
+        audioManager.playHitSFX();
 
         if (isInvincible)
             return;
         else
             StartCoroutine(InvincibilityFrames(1f));
         
+
+        cameraShake.startShake();
+
         int health = featherManger.currentFeathers;
         health--;
         FeatherCounter.instance.DecreaseFeathers(1);
