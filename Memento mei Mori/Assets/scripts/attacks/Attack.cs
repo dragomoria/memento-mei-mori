@@ -58,12 +58,15 @@ public class Attack : MonoBehaviour
     }
 
 
+
+
+//refactor the attackID usage, make attackID atomic, use switch statement, create coroutines for combos  and i dont fucking know add some vfxs ig
     IEnumerator AttackChoice()
     {
         int attackID = 1;
         while (true)
         {
-            attackID = Random.Range(1, 3); // swap that with function that has skewness and cannot allow repetitions. 
+            attackID = Random.Range(1, 5); // swap that with function that has skewness and cannot allow repetitions. 
             // Debug.Log(attackID);
             if (!readyToAttack)
             {
@@ -82,22 +85,47 @@ public class Attack : MonoBehaviour
                 // Debug.Log("spikes not ready to attack yet");
                 continue;
             }
-            if (attackID == 2 )
+            if (attackID == 2)
             {
                 attackManager.selectAttack(AttackType.skull, new AttackParams());
             }
-            // attackManager.selectAttack(AttackType.slash, new AttackParams
-            // {
-            //     position = null,
-            //     rotation = Random.Range(-20f, 20f),
-            //     frequency = Random.Range(0.5f, 1.5f),
-            //     duration = Random.Range(1f, 2f),
-            //     speed = Random.Range(1f, 3f),
-            //     telegraphDuration = 1f,
-            //     attackDuration = 0.2f,
-            //     spriteDuration = 2.5f,
-            //     attackType = this.attackType
-            // });
+            else if (attackID == 3)
+                for (int i = 0; i < 4; i++)
+                {
+                    attackManager.selectAttack(AttackType.slash, new AttackParams
+                    {
+                        position = null,
+                        rotation = Random.Range(-20f, 20f),
+                        frequency = Random.Range(0.5f, 1.5f),
+                        duration = Random.Range(1f, 2f),
+                        speed = Random.Range(1f, 3f),
+                        telegraphDuration = 1f,
+                        attackDuration = 0.2f,
+                        spriteDuration = 2.5f,
+                        attackType = this.attackType
+                    });
+                    yield return new WaitForSeconds(0.15f);
+                }
+            else
+            {
+                attackManager.selectAttack(AttackType.skull, new AttackParams());
+                for (int i = 0; i < 4; i++)
+                {
+                    attackManager.selectAttack(AttackType.slash, new AttackParams
+                    {
+                        position = null,
+                        rotation = Random.Range(-20f, 20f),
+                        frequency = Random.Range(0.5f, 1.5f),
+                        duration = Random.Range(1f, 2f),
+                        speed = Random.Range(1f, 3f),
+                        telegraphDuration = 1f,
+                        attackDuration = 0.2f,
+                        spriteDuration = 2.5f,
+                        attackType = this.attackType
+                    });
+                    yield return new WaitForSeconds(0.15f);
+                }
+            }
 
             readyToAttack = false;
             yield return new WaitForSeconds(1f);

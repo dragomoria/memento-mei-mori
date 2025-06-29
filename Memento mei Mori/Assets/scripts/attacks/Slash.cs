@@ -44,6 +44,7 @@ public class Slash : IAttackPattern
         Vector2 size = Vector2.Scale(boxCollider.size, hitboxPrefab.transform.lossyScale);
         float angle = rotation.eulerAngles.z;
 
+        GlobalAttackEvent.AttackFinished();
 
         Collider2D[] hits = Physics2D.OverlapBoxAll(spawnPosition, size, angle);
 
