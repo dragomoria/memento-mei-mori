@@ -79,7 +79,7 @@ public class Attack : MonoBehaviour
         int attackID = 1;
         while (true)
         {
-            // attackID = Random.Range(1, 3); // swap that with function that has skewness and cannot allow repetitions. 
+            attackID = Random.Range(1, 3); // swap that with function that has skewness and cannot allow repetitions. 
             // Debug.Log(attackID);
             if (!readyToAttack)
             {

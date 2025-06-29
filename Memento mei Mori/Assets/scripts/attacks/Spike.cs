@@ -21,7 +21,9 @@ public class Spike : IAttackPattern
     private Vector3 bottomLeft = new Vector3(-3, -4, 0); // the right one is just negate the x value and flip in x axis 
     private GameObject spikePrefab;
 
-    private List<GameObject> spikeList = new List<GameObject>();
+    private List<GameObject> leftSpikeList = new List<GameObject>();
+    
+    private List<GameObject> rightSpikeList = new List<GameObject>();
 
     public Spike(GameObject spikePrefab)
     {
@@ -30,51 +32,60 @@ public class Spike : IAttackPattern
 
     public IEnumerator ExecuteAttack(SpriteHandler spriteHandler, AttackParams attackParams)
     {
-        yield return spawnWall(Dir.left, attackParams, spriteHandler);
+        yield return spawnWall(attackParams, spriteHandler);
     }
 
-    private IEnumerator spawnWall(Dir whereToSpawn, AttackParams attackParams, SpriteHandler spriteHandler)
+    private IEnumerator spawnWall(AttackParams attackParams, SpriteHandler spriteHandler)
     {
 
         float spikeHeight = spikePrefab.GetComponent<SpriteRenderer>().bounds.size.y;
         float spikeLength = spikePrefab.GetComponent<SpriteRenderer>().bounds.size.x;
-        int spikeCount = (int)(4 / spikeHeight);
-        switch (whereToSpawn)
+        int spikeCount = (int)(4.8 / spikeHeight);
+        for (int i = 0; i < spikeCount; i++)
         {
-            case Dir.left:
-                for (int i = 0; i < spikeCount; i++)
-                {
-                    Vector3 spawnPos = bottomLeft + new Vector3(-spikeLength, i * spikeHeight, 0);
-                    spikeList.Add(Object.Instantiate(spikePrefab, spawnPos, Quaternion.identity));
-                }
-
-                foreach (var spike in spikeList)
-                {
-                    Vector3 start = spike.transform.position;
-                    Vector3 end = start + new Vector3(spikeLength, 0, 0);
-                    spriteHandler.StartCoroutine(spriteHandler.moveSpike(spike ,start, end, .5f)); // delegate the parallel execution to sprite handlere
-                }
-                break;
-            case Dir.right:
-                // TODO: spawn wall to the right
-                break;
-            default:
-                Debug.Log("Not correct direction of wall of spikes");
-                break;
+            Vector3 spawnPos = bottomLeft + new Vector3(-spikeLength, i * spikeHeight, 0);
+            leftSpikeList.Add(Object.Instantiate(spikePrefab, spawnPos, Quaternion.identity));
         }
+
+        foreach (var spike in leftSpikeList)
+
+        {
+            Vector3 start = spike.transform.position;
+            Vector3 end = start + new Vector3(spikeLength, 0, 0);
+            spriteHandler.StartCoroutine(spriteHandler.moveSpike(spike, start, end, .5f)); // delegate the parallel execution to sprite handlere
+        }
+
+        for (int i = 0; i < spikeCount; i++) // this code is perfect, dont let anybody tell you otherwise ~ Marcel
+        {
+            Vector3 spawnPos = bottomRight + new Vector3(spikeLength, i * spikeHeight, 0);
+            rightSpikeList.Add(Object.Instantiate(spikePrefab, spawnPos, Quaternion.Euler(0, 180, 0)));
+        }
+
+        foreach (var spike in rightSpikeList)
+        {
+            Vector3 start = spike.transform.position;
+            Vector3 end = start - new Vector3(spikeLength, 0, 0);
+            spriteHandler.StartCoroutine(spriteHandler.moveSpike(spike, start, end, .5f)); // delegate the parallel execution to sprite handlere
+        }
+
         yield return new WaitForSeconds(attackParams.telegraphDuration ?? 0.1f); // wait until spikes are in plce 
 
         GlobalAttackEvent.AttackFinished(); // flag that you can start different attack
 
-        yield return new WaitForSeconds((float) (attackParams.duration ?? 5f)); // how long does the spikes last for 
+        yield return new WaitForSeconds((float)(attackParams.duration ?? 5f)); // how long does the spikes last for 
         GlobalAttackEvent.SpikeReady();
 
         // cleanup 
-        foreach (var spike in spikeList)
+        foreach (var spike in leftSpikeList)
         {
             Object.Destroy(spike);
         }
-        spikeList.Clear();
+        leftSpikeList.Clear();
+        foreach (var spike in rightSpikeList)
+        {
+            Object.Destroy(spike);
+        }
+        rightSpikeList.Clear();
     }
 
 
