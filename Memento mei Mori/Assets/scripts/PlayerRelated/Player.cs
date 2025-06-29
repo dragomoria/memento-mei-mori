@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -17,6 +18,10 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private PlayerMovement playerMovement;
+    [SerializeField]
+    private GameObject damageVFXPrefab;
+
+
     private float knocbackForce = 5f;
 
     private bool isInvincible = false;
@@ -53,6 +58,10 @@ public class Player : MonoBehaviour
 
     public void getDamage()
     {
+        GameObject vfx = Instantiate(damageVFXPrefab, selfTransform.position, quaternion.identity);
+        Destroy(vfx, 2f);
+
+
         if (isInvincible)
             return;
         else
