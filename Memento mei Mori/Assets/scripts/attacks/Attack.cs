@@ -57,22 +57,6 @@ public class Attack : MonoBehaviour
         StartCoroutine(AttackChoice());
     }
 
-    private AttackType mapIDToAttackType(int id)
-    {
-        switch (id)
-        {
-            case 0:
-                return AttackType.slash;
-            case 1:
-                return AttackType.diagonalSlash;
-            case 2:
-                return AttackType.skull;
-            default:
-                Debug.LogWarning("Unknown attack ID: " + id);
-                return AttackType.slash; // Default to slash if unknown
-        }
-    }
-
 
     IEnumerator AttackChoice()
     {
@@ -124,7 +108,6 @@ public class Attack : MonoBehaviour
     private void onAttackFinished()
     {
         readyToAttack = true;
-        // Debug.Log("successfully run the shit");
     }
     private void onSpikeReady()
     {

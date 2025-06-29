@@ -17,15 +17,15 @@ public class Skull : IAttackPattern
 
     public IEnumerator ExecuteAttack(SpriteHandler spriteHandler, AttackParams attackParams)
     {
-        Vector3 center = new Vector3(0, -2, 0);
+        Vector3 spawnPosition = attackParams.position ?? attackParams.center;
         spriteHandler.showMagicAttack();
-        GameObject skull = Object.Instantiate(skullPrefab, center, quaternion.Euler(0,0,0));
+        GameObject skull = Object.Instantiate(skullPrefab, spawnPosition, quaternion.Euler(0,0,0));
         yield return new WaitForSeconds(attackParams.telegraphDuration ?? 1f);
 
         for (int i = 0; i < 360f; i += 5)
         {
             Quaternion rotation = Quaternion.Euler(0, 0, i);
-            GameObject projectile = Object.Instantiate(projectilePrefab, center, rotation);
+            GameObject projectile = Object.Instantiate(projectilePrefab, spawnPosition, rotation);
 
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             Vector2 direction = rotation * Vector2.right;
@@ -34,7 +34,7 @@ public class Skull : IAttackPattern
             skull.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, i);
 
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(attackParams.speed ?? 0.1f );
         }
 
         GlobalAttackEvent.AttackFinished();
