@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     public FeatherBehavior FeatherPrefab;
     public SpawnPickupBehavior pawn;
     private bool curStatus;
-    private FeatherCounter featherManger;
     
     [SerializeField]
     private Transform selfTransform;
@@ -36,7 +35,6 @@ public class Player : MonoBehaviour
     void Start()
     {
         curStatus = false;
-        featherManger = FeatherCounter.instance;
         setBaseFeathers(10);
     }
 

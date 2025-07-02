@@ -1,6 +1,9 @@
 using UnityEngine;
 using TMPro;
 
+
+
+//obsolote class
 public class FeatherCounter : MonoBehaviour
 {
 

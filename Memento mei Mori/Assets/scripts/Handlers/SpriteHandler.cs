@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,11 +17,12 @@ public class SpriteHandler : MonoBehaviour
 
     private int featherIndex = 0;
 
-    [SerializeField]
-    private List<Image> featherSprites = new List<Image>();
 
+    //pls set this up
+   [SerializeField] private List<Image> featherSprites = new List<Image>();
    [SerializeField] private Sprite emptyFeather;
    [SerializeField] private Sprite fullFeather;
+   [SerializeField] private TMP_Text featherText;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -36,6 +38,7 @@ public class SpriteHandler : MonoBehaviour
         magicAttack = GameObject.Find("Magic Attack");
         slashAttack = GameObject.Find("Slash");
         skullAttack = GameObject.Find("Skull Attack");
+        featherText.text = "Feathers: " + featherIndex.ToString();
         hideAll();
     }
 
@@ -137,6 +140,7 @@ public class SpriteHandler : MonoBehaviour
         }
         featherSprites[featherIndex].sprite = fullFeather;
         featherIndex++;
+        featherText.text = "Feathers: " + (featherIndex-1).ToString();
     }
 
     public void removeLastFeather()
@@ -148,5 +152,7 @@ public class SpriteHandler : MonoBehaviour
         }
         featherSprites[featherIndex - 1].sprite = emptyFeather;
         featherIndex--; 
+        featherText.text = "Feathers: " + (featherIndex-1).ToString();
+
     }
 }
