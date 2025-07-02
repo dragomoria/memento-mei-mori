@@ -101,17 +101,19 @@ public class SpriteHandler : MonoBehaviour
         }
     }
 
-    public IEnumerator moveSpike(GameObject spike, Vector3 start, Vector3 end, float duration) // lerp the movement so it is smoooth
+    public IEnumerator moveSprite(GameObject sprite, Vector3 start, Vector3 end, float duration) // lerp the movement so it is smoooth
     {
+        Debug.Log($"moved sprite {sprite} from: {start} to {end} in {duration} s");
         float t = 0;
         while (t < 1f)
         {
             t += Time.deltaTime / duration;
-            spike.transform.position = Vector3.Lerp(start, end, t);
+            sprite.transform.position = Vector3.Lerp(start, end, t);
             yield return null;
         }
-        
+
     }
+
 
 
 }

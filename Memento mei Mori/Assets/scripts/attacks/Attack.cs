@@ -31,9 +31,6 @@ public class Attack : MonoBehaviour
 
 
 
-    // expose to unity editor 
-    [Header("Attack Settings")]
-    [Tooltip("Duration of the slash warning before damage is applied.")]
 
 
     [SerializeField] private float dealayTime = 2.5f;

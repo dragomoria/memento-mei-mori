@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f212089f807ecaa448095b58f484a123
+guid: 9a712499bd641684bacbd863a482d340
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7216409145630115100
-    second: kolec_0
+      213: -4514878311770001818
+    second: mist_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kolec_0
+      name: mist_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 24
         y: 7
-        width: 393
-        height: 106
+        width: 2065
+        height: 293
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4ea36d0cd1a2adb90800000000000000
-      internalID: -7216409145630115100
+      spriteID: 66e65d6a81ee751c0800000000000000
+      internalID: -4514878311770001818
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kolec_0: -7216409145630115100
+      mist_0: -4514878311770001818
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

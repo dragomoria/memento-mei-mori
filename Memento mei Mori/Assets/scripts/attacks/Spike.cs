@@ -52,7 +52,7 @@ public class Spike : IAttackPattern
         {
             Vector3 start = spike.transform.position;
             Vector3 end = start + new Vector3(spikeLength, 0, 0);
-            spriteHandler.StartCoroutine(spriteHandler.moveSpike(spike, start, end, .5f)); // delegate the parallel execution to sprite handlere
+            spriteHandler.StartCoroutine(spriteHandler.moveSprite(spike, start, end, .5f)); // delegate the parallel execution to sprite handlereit
         }
 
         for (int i = 0; i < spikeCount; i++) // this code is perfect, dont let anybody tell you otherwise ~ Marcel
@@ -65,7 +65,7 @@ public class Spike : IAttackPattern
         {
             Vector3 start = spike.transform.position;
             Vector3 end = start - new Vector3(spikeLength, 0, 0);
-            spriteHandler.StartCoroutine(spriteHandler.moveSpike(spike, start, end, .5f)); // delegate the parallel execution to sprite handlere
+            spriteHandler.StartCoroutine(spriteHandler.moveSprite(spike, start, end, .5f)); // delegate the parallel execution to sprite handlere
         }
 
         yield return new WaitForSeconds(attackParams.telegraphDuration ?? 0.1f); // wait until spikes are in plce 

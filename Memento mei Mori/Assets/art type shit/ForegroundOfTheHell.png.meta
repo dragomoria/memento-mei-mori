@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: f38982aa0620b32479952b5df4cb5262
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2782579422411482592
+    second: ForegroundOfTheHell_0
+  - first:
+      213: 5904204328280344054
+    second: ForegroundOfTheHell_1
+  - first:
+      213: -7738437225719955287
+    second: ForegroundOfTheHell_2
+  - first:
+      213: 5668944547320116233
+    second: ForegroundOfTheHell_3
+  - first:
+      213: -2814192535630722976
+    second: ForegroundOfTheHell_4
+  - first:
+      213: 1999322167171935613
+    second: ForegroundOfTheHell_5
+  - first:
+      213: 7281900489417385998
+    second: ForegroundOfTheHell_6
+  - first:
+      213: 2384436258246412210
+    second: ForegroundOfTheHell_7
+  - first:
+      213: 461157774424453579
+    second: ForegroundOfTheHell_8
+  - first:
+      213: 5822422679491629471
+    second: ForegroundOfTheHell_9
+  - first:
+      213: -7159164461043425480
+    second: ForegroundOfTheHell_10
+  - first:
+      213: -5059033298547022355
+    second: ForegroundOfTheHell_11
+  - first:
+      213: -771793482372781184
+    second: ForegroundOfTheHell_12
+  - first:
+      213: 5823471439402444781
+    second: ForegroundOfTheHell_13
+  - first:
+      213: -8029670444035520792
+    second: ForegroundOfTheHell_14
+  - first:
+      213: 8107373313454890234
+    second: ForegroundOfTheHell_15
+  - first:
+      213: -3432376330312222802
+    second: ForegroundOfTheHell_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 37
+        width: 117
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5e520fd35bd9620800000000000000
+      internalID: 2782579422411482592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 148
+        width: 128
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f549740e82ffe150800000000000000
+      internalID: 5904204328280344054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 128
+        width: 101
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a08d4cd75c8b9490800000000000000
+      internalID: -7738437225719955287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_3
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 6
+        width: 106
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904376ac7032cae40800000000000000
+      internalID: 5668944547320116233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_4
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 38
+        width: 100
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068cc209ccaf1f8d0800000000000000
+      internalID: -2814192535630722976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_5
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 5
+        width: 111
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7de8dd0be40fbb10800000000000000
+      internalID: 1999322167171935613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_6
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1
+        width: 81
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e086779f9e18e0560800000000000000
+      internalID: 7281900489417385998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_7
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 136
+        width: 103
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7c652c428371120800000000000000
+      internalID: 2384436258246412210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_8
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 0
+        width: 93
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1baf17d8c566600800000000000000
+      internalID: 461157774424453579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_9
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 0
+        width: 80
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f91d64714966dc050800000000000000
+      internalID: 5822422679491629471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_10
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 22
+        width: 90
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fd7e28ad985ac90800000000000000
+      internalID: -7159164461043425480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_11
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 4
+        width: 84
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de56b35d404bac9b0800000000000000
+      internalID: -5059033298547022355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_12
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 38
+        width: 108
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b653bbae90a45f0800000000000000
+      internalID: -771793482372781184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_13
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 165
+        width: 114
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de727398b6021d050800000000000000
+      internalID: 5823471439402444781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_14
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 11
+        width: 80
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e64fcf2641e09090800000000000000
+      internalID: -8029670444035520792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_15
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 22
+        width: 128
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcd5f9e21d238070800000000000000
+      internalID: 8107373313454890234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ForegroundOfTheHell_16
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 26
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7f740c9efbd50d0800000000000000
+      internalID: -3432376330312222802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ForegroundOfTheHell_0: 2782579422411482592
+      ForegroundOfTheHell_1: 5904204328280344054
+      ForegroundOfTheHell_10: -7159164461043425480
+      ForegroundOfTheHell_11: -5059033298547022355
+      ForegroundOfTheHell_12: -771793482372781184
+      ForegroundOfTheHell_13: 5823471439402444781
+      ForegroundOfTheHell_14: -8029670444035520792
+      ForegroundOfTheHell_15: 8107373313454890234
+      ForegroundOfTheHell_16: -3432376330312222802
+      ForegroundOfTheHell_2: -7738437225719955287
+      ForegroundOfTheHell_3: 5668944547320116233
+      ForegroundOfTheHell_4: -2814192535630722976
+      ForegroundOfTheHell_5: 1999322167171935613
+      ForegroundOfTheHell_6: 7281900489417385998
+      ForegroundOfTheHell_7: 2384436258246412210
+      ForegroundOfTheHell_8: 461157774424453579
+      ForegroundOfTheHell_9: 5822422679491629471
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
