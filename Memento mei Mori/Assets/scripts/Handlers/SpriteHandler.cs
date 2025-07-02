@@ -1,12 +1,26 @@
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
 public class SpriteHandler : MonoBehaviour
 {
     GameObject magicAttack;
     GameObject slashAttack;
     GameObject skullAttack;
     public static SpriteHandler instance { get; private set; }
+
+
+    private int featherIndex = 0;
+
+    [SerializeField]
+    private List<Image> featherSprites = new List<Image>();
+
+   [SerializeField] private Sprite emptyFeather;
+   [SerializeField] private Sprite fullFeather;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
@@ -114,6 +128,25 @@ public class SpriteHandler : MonoBehaviour
 
     }
 
+    public void updateFeatherCounter()
+    {
+        if (featherIndex++ > 20)
+        {
+            Debug.LogWarning($"feather index out of bounds: {featherIndex}");
+            return;
+        }
+        featherSprites[featherIndex].sprite = fullFeather;
+        featherIndex++;
+    }
 
-
+    public void removeLastFeather()
+    {
+        if (featherIndex < 0)
+        {
+            Debug.LogWarning($"feather index out of bounds: {featherIndex}");
+            return;
+        }
+        featherSprites[featherIndex - 1].sprite = emptyFeather;
+        featherIndex--; 
+    }
 }
