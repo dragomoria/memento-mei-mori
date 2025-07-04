@@ -5,6 +5,7 @@ public static class GlobalAttackEvent
 {
     public static event Action onAttackFinished;
     public static event Action spikeReady;
+    public static event Action skullReady;
 
     public static void AttackFinished()
     {
@@ -14,6 +15,10 @@ public static class GlobalAttackEvent
     public static void SpikeReady()
     {
         spikeReady?.Invoke();
+    }
+    public static void SkullReady()
+    {
+        skullReady?.Invoke();
     }
  
 }

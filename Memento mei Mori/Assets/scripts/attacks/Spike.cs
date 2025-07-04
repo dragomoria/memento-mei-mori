@@ -72,7 +72,7 @@ public class Spike : IAttackPattern
 
         GlobalAttackEvent.AttackFinished(); // flag that you can start different attack
 
-        yield return new WaitForSeconds((float)(attackParams.duration ?? 15f)); // how long does the spikes last for 
+        yield return new WaitForSeconds((float)(attackParams.duration ?? 10f)); // how long does the spikes last for 
         GlobalAttackEvent.SpikeReady();
 
         // cleanup 

@@ -38,7 +38,7 @@ public class Skull : IAttackPattern
 
             yield return new WaitForSeconds(attackParams.frequency ?? 0.1f);
         }
-
+        GlobalAttackEvent.SkullReady();
         spriteHandler.hideMagicAttack();
         Object.Destroy(skull);
 

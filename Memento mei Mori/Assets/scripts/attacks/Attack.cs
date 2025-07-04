@@ -30,6 +30,7 @@ public class Attack : MonoBehaviour
 
     private bool readyToAttack;
     private bool spikesReady= true;
+    private bool skullReady = true;
 
 
 
@@ -73,7 +74,6 @@ public class Attack : MonoBehaviour
             // Debug.Log(attackID);
             if (!readyToAttack)
             {
-                // Debug.Log("not ready to attack");
                 yield return new WaitForSeconds(0.49f);
                 continue;
             }
@@ -84,11 +84,10 @@ public class Attack : MonoBehaviour
             }
             else if (!spikesReady && attackID == 1)
             {
-                yield return new WaitForSeconds(0.49f);
-                // Debug.Log("spikes not ready to attack yet");
+                yield return new WaitForSeconds(0.05f);
                 continue;
             }
-            if (attackID == 2)
+            if (attackID == 2 && skullReady)
             {
                 attackManager.selectAttack(AttackType.skull, new AttackParams
                 {
@@ -102,8 +101,16 @@ public class Attack : MonoBehaviour
                     spriteDuration = Random.Range(0.5f, 2f),
                     attackType = this.attackType
                 });
+                skullReady = false;
             }
-            else if (attackID == 3)
+            else if (attackID == 2 && !skullReady)
+            {
+                yield return new WaitForSeconds(.05f);
+                continue;
+            }
+
+            if (attackID == 3)
+            {
                 for (int i = 0; i < 4; i++)
                 {
                     attackManager.selectAttack(AttackType.slash, new AttackParams
@@ -120,9 +127,15 @@ public class Attack : MonoBehaviour
                     });
                     yield return new WaitForSeconds(0.05f);
                 }
-            else
+            }
+
+            if (attackID == 4)
             {
-                // attackManager.selectAttack(AttackType.skull, new AttackParams());
+                if (skullReady)
+                {
+                    attackManager.selectAttack(AttackType.skull, new AttackParams());
+                    skullReady = false;
+                }
                 for (int i = 0; i < 4; i++)
                 {
                     attackManager.selectAttack(AttackType.slash, new AttackParams
@@ -147,6 +160,7 @@ public class Attack : MonoBehaviour
     }
 
 
+    //this is shit, dont do it like that btw 
     private void onAttackFinished()
     {
         readyToAttack = true;
@@ -156,15 +170,21 @@ public class Attack : MonoBehaviour
         spikesReady = true;
     }
 
+    private void onSkullReady() {
+        skullReady = true;
+    }
+
     void OnEnable()
     {
         GlobalAttackEvent.onAttackFinished += onAttackFinished;
         GlobalAttackEvent.spikeReady += onSpikeReady;
+        GlobalAttackEvent.skullReady += onSkullReady;
     }
     void OnDisable()
     {
         GlobalAttackEvent.spikeReady -= onSpikeReady;
         GlobalAttackEvent.onAttackFinished -= onAttackFinished;
+        GlobalAttackEvent.skullReady -= onSkullReady;
     }
 
 }
