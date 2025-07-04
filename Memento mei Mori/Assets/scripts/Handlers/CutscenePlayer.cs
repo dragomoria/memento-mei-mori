@@ -1,5 +1,5 @@
 using System;
-using Microsoft.Unity.VisualStudio.Editor;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
@@ -9,6 +9,8 @@ public class CutscenePlayer : MonoBehaviour
     [SerializeField] public Transform panelParent;
     [SerializeField] public float panelDuration =  10f; 
 
+    [SerializeField] public GameObject button;
+
     private Image[] panels;
     private int panelIndex = 0;
     private float timer = 0f;
@@ -17,6 +19,8 @@ public class CutscenePlayer : MonoBehaviour
     void Start()
     {
         panels = panelParent.GetComponentsInChildren<Image>(true);
+        if (button!= null)
+            button.SetActive(false);
         showPanel(0);
     }
 
@@ -48,6 +52,8 @@ public class CutscenePlayer : MonoBehaviour
     private void EndCutscene()
     {
         gameObject.SetActive(false);
+        if (button != null)
+            button.SetActive(true);
     }
 
     

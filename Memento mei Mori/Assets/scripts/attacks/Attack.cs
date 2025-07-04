@@ -54,15 +54,20 @@ public class Attack : MonoBehaviour
             Debug.LogError("SpriteHandler instance not found!");
             return;
         }
-        StartCoroutine(AttackChoice());
+        StartCoroutine(wait(1));
     }
 
 
-
+    private IEnumerator wait(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        yield return StartCoroutine(AttackChoice());
+    }
 
 //refactor the attackID usage, make attackID atomic, use switch statement, create coroutines for combos  and i dont fucking know add some vfxs ig
     IEnumerator AttackChoice()
     {
+        
         if (attacksOff) yield return new WaitForSeconds(100f);
         int attackID;
         int prevAttackID=-1;
