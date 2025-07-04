@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 760099d17f6c50441bb5451c541119c0
+guid: e825ea5c59aa90c46b356a8fc529bbfc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5545012388695028988
-    second: piorko-empty_0
+      213: -4170567330275195842
+    second: full feather_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: piorko-empty_0
+      name: full feather_0
       rect:
         serializedVersion: 2
         x: 13
         y: 126
         width: 482
-        height: 262
+        height: 356
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf4be478367d3fc40800000000000000
-      internalID: 5545012388695028988
+      spriteID: e3409171c1b2f16c0800000000000000
+      internalID: -4170567330275195842
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      piorko-empty_0: 5545012388695028988
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -15,11 +15,9 @@ public class SpriteHandler : MonoBehaviour
     public static SpriteHandler instance { get; private set; }
 
 
-    private int featherIndex = 0;
-
 
     //pls set this up
-   [SerializeField] private List<Image> featherSprites = new List<Image>();
+   [SerializeField] private List<SpriteRenderer> featherSprites = new List<SpriteRenderer>(20);
    [SerializeField] private Sprite emptyFeather;
    [SerializeField] private Sprite fullFeather;
    [SerializeField] private TMP_Text featherText;
@@ -31,6 +29,7 @@ public class SpriteHandler : MonoBehaviour
         instance = this;
         // Ensure that the GameObject is not destroyed when loading a new scene
         DontDestroyOnLoad(gameObject);
+        featherText.text = "Feathers: " + "0";
     }
 
     void Start()
@@ -38,7 +37,6 @@ public class SpriteHandler : MonoBehaviour
         magicAttack = GameObject.Find("Magic Attack");
         slashAttack = GameObject.Find("Slash");
         skullAttack = GameObject.Find("Skull Attack");
-        featherText.text = "Feathers: " + featherIndex.ToString();
         hideAll();
     }
 
@@ -120,7 +118,7 @@ public class SpriteHandler : MonoBehaviour
 
     public IEnumerator moveSprite(GameObject sprite, Vector3 start, Vector3 end, float duration) // lerp the movement so it is smoooth
     {
-        Debug.Log($"moved sprite {sprite} from: {start} to {end} in {duration} s");
+        // Debug.Log($"moved sprite {sprite} from: {start} to {end} in {duration} s");
         float t = 0;
         while (t < 1f)
         {
@@ -131,28 +129,30 @@ public class SpriteHandler : MonoBehaviour
 
     }
 
-    public void updateFeatherCounter()
+    public void updateFeatherCounter(int featherIndex)
     {
-        if (featherIndex++ > 20)
+
+        Debug.Log($"feather index; {featherIndex}");
+        if (featherIndex > 19)
         {
             Debug.LogWarning($"feather index out of bounds: {featherIndex}");
             return;
         }
         featherSprites[featherIndex].sprite = fullFeather;
         featherIndex++;
-        featherText.text = "Feathers: " + (featherIndex-1).ToString();
+        featherText.text = "Feathers: " + (featherIndex).ToString();
     }
 
-    public void removeLastFeather()
+    public void removeLastFeather(int featherIndex)
     {
         if (featherIndex < 0)
         {
             Debug.LogWarning($"feather index out of bounds: {featherIndex}");
             return;
         }
-        featherSprites[featherIndex - 1].sprite = emptyFeather;
         featherIndex--; 
-        featherText.text = "Feathers: " + (featherIndex-1).ToString();
+        featherSprites[featherIndex].sprite = emptyFeather;
+        featherText.text = "Feathers: " + (featherIndex).ToString();
 
     }
 }

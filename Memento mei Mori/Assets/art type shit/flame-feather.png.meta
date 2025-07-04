@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flame-feather_0: 6167094288980686089
+      flame-feather_1: 8903785198291457748
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

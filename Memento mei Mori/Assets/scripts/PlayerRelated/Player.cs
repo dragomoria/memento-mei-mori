@@ -58,9 +58,13 @@ public class Player : MonoBehaviour
 
     public void collectFeather()
     {
+        spriteHandler.updateFeatherCounter(featherCount);
         featherCount++;
-        spriteHandler.updateFeatherCounter();
-
+        if (featherCount > 19)
+        {
+            WinTheGame();
+            return;
+        }
     }
 
     public void getDamage()
@@ -77,22 +81,15 @@ public class Player : MonoBehaviour
 
         cameraShake.startShake();
 
-
-
-        FeatherCounter.instance.DecreaseFeathers();
         if (featherCount <= 0)
         {
             Dead();
             return;
         }
-        if (featherCount >= 20)
-        {
-            WinTheGame();
-            return;
-        }
+        
 
+        spriteHandler.removeLastFeather(featherCount);
         featherCount--;
-        spriteHandler.removeLastFeather();
     }
     
     public void getDamage(Vector3 directionFrom, float? knocbackForce)

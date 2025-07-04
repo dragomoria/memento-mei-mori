@@ -19,9 +19,11 @@ public class Skull : IAttackPattern
     {
         Vector3 spawnPosition = attackParams.position ?? attackParams.center;
         spriteHandler.showMagicAttack();
-        GameObject skull = Object.Instantiate(skullPrefab, spawnPosition, quaternion.Euler(0,0,0));
+        GameObject skull = Object.Instantiate(skullPrefab, spawnPosition, quaternion.Euler(0, 0, 0));
         yield return new WaitForSeconds(attackParams.telegraphDuration ?? 1f);
 
+        GlobalAttackEvent.AttackFinished();
+        
         for (int i = 0; i < 360f; i += 5)
         {
             Quaternion rotation = Quaternion.Euler(0, 0, i);
@@ -34,13 +36,14 @@ public class Skull : IAttackPattern
             skull.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, i);
 
 
-            yield return new WaitForSeconds(attackParams.speed ?? 0.1f );
+            yield return new WaitForSeconds(attackParams.frequency ?? 0.1f);
         }
 
-        GlobalAttackEvent.AttackFinished();
         spriteHandler.hideMagicAttack();
         Object.Destroy(skull);
 
 
     }
+
+    
 }
