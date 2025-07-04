@@ -5,6 +5,6 @@ public class ContinueStory : MonoBehaviour
 {
     public void ProgressStoryClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Game");
     }
 }

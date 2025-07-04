@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: dae4c5d547a490946a9883a02f02fc03
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4855452805182563121
+    second: soulz_0
+  - first:
+      213: -8882319558281009340
+    second: soulz_1
+  - first:
+      213: -6502505516280661955
+    second: soulz_2
+  - first:
+      213: -3227006509236531215
+    second: soulz_3
+  - first:
+      213: 5592298973032040271
+    second: soulz_4
+  - first:
+      213: 8133732489240128763
+    second: soulz_5
+  - first:
+      213: 474023291800499986
+    second: soulz_6
+  - first:
+      213: -7856118618873196321
+    second: soulz_7
+  - first:
+      213: -6221804443242985498
+    second: soulz_8
+  - first:
+      213: 6681839540440073113
+    second: soulz_9
+  - first:
+      213: -304120046783792717
+    second: soulz_10
+  - first:
+      213: -9055563199287643908
+    second: soulz_11
+  - first:
+      213: -754421469971229886
+    second: soulz_12
+  - first:
+      213: 5257821486230190317
+    second: soulz_13
+  - first:
+      213: -168175791433829347
+    second: soulz_14
+  - first:
+      213: -3104684033507614083
+    second: soulz_15
+  - first:
+      213: -8588165891754324183
+    second: soulz_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: soulz_0
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 37
+        width: 117
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 133a49cd998026340800000000000000
+      internalID: 4855452805182563121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_1
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 148
+        width: 128
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 447e72b1c69abb480800000000000000
+      internalID: -8882319558281009340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 128
+        width: 101
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d38b2184fa572c5a0800000000000000
+      internalID: -6502505516280661955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_3
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 6
+        width: 106
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ff45116dae5733d0800000000000000
+      internalID: -3227006509236531215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_4
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 38
+        width: 100
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f474b556946db9d40800000000000000
+      internalID: 5592298973032040271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_5
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 5
+        width: 111
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc2637ca92d0e070800000000000000
+      internalID: 8133732489240128763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_6
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1
+        width: 81
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217b7032ca1149600800000000000000
+      internalID: 474023291800499986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_7
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 136
+        width: 103
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd01bb85db579f290800000000000000
+      internalID: -7856118618873196321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_8
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 0
+        width: 93
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e70e8ac2d5b7a9a0800000000000000
+      internalID: -6221804443242985498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_9
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 0
+        width: 80
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993071ef8a9aabc50800000000000000
+      internalID: 6681839540440073113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_10
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 22
+        width: 90
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b97062cd6c87cbf0800000000000000
+      internalID: -304120046783792717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_11
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 4
+        width: 84
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf03c59af3d245280800000000000000
+      internalID: -9055563199287643908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_12
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 38
+        width: 108
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243df6f8ba1c785f0800000000000000
+      internalID: -754421469971229886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_13
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 165
+        width: 114
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8ba2bd8c887f840800000000000000
+      internalID: 5257821486230190317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_14
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 11
+        width: 80
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1434cb32058aadf0800000000000000
+      internalID: -168175791433829347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_15
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 22
+        width: 128
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72a3f22252f9e4d0800000000000000
+      internalID: -3104684033507614083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: soulz_16
+      rect:
+        serializedVersion: 2
+        x: 1642
+        y: 26
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f8bdd9f94b0d880800000000000000
+      internalID: -8588165891754324183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      soulz_0: 4855452805182563121
+      soulz_1: -8882319558281009340
+      soulz_10: -304120046783792717
+      soulz_11: -9055563199287643908
+      soulz_12: -754421469971229886
+      soulz_13: 5257821486230190317
+      soulz_14: -168175791433829347
+      soulz_15: -3104684033507614083
+      soulz_16: -8588165891754324183
+      soulz_2: -6502505516280661955
+      soulz_3: -3227006509236531215
+      soulz_4: 5592298973032040271
+      soulz_5: 8133732489240128763
+      soulz_6: 474023291800499986
+      soulz_7: -7856118618873196321
+      soulz_8: -6221804443242985498
+      soulz_9: 6681839540440073113
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

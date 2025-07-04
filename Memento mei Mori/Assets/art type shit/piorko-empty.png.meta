@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 33c0981d0e276bc4fab9e469d51f0eeb
+guid: 760099d17f6c50441bb5451c541119c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2125071745987355161
-    second: vignhette mask_0
+      213: 5545012388695028988
+    second: piorko-empty_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vignhette mask_0
+      name: piorko-empty_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3840
-        height: 2160
+        x: 13
+        y: 126
+        width: 482
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ed5432918a3282e0800000000000000
-      internalID: -2125071745987355161
+      spriteID: cf4be478367d3fc40800000000000000
+      internalID: 5545012388695028988
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      vignhette mask_0: -2125071745987355161
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

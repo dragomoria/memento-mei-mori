@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 33c0981d0e276bc4fab9e469d51f0eeb
+guid: 691b418e9afe8604dbdbad44db9fe789
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2125071745987355161
-    second: vignhette mask_0
+      213: 6167094288980686089
+    second: flame-feather_0
+  - first:
+      213: 8903785198291457748
+    second: flame-feather_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +116,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vignhette mask_0
+      name: flame-feather_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3840
-        height: 2160
+        x: 13
+        y: 126
+        width: 482
+        height: 356
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +131,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ed5432918a3282e0800000000000000
-      internalID: -2125071745987355161
+      spriteID: 905b807c49be59550800000000000000
+      internalID: 6167094288980686089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flame-feather_1
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 126
+        width: 482
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d61b8ca679909b70800000000000000
+      internalID: 8903785198291457748
       vertices: []
       indices: 
       edges: []
@@ -147,8 +172,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      vignhette mask_0: -2125071745987355161
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

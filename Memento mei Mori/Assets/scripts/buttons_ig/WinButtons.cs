@@ -6,7 +6,7 @@ public class WinButtons : MonoBehaviour
 {
     public void OnRetryClick()
 	{
-		SceneManager.LoadScene("SampleScene");
+		SceneManager.LoadScene("Game");
 	}
 
     public void OnExitClick()
