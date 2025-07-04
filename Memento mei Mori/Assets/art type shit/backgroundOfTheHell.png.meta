@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: b4359a81648dbc74ab17c01b4730a1c4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2965243328348324361
+    second: backgroundOfTheHell_0
+  - first:
+      213: 3447479990884744421
+    second: backgroundOfTheHell_1
+  - first:
+      213: 8587963975428552522
+    second: backgroundOfTheHell_2
+  - first:
+      213: -1033795017525658919
+    second: backgroundOfTheHell_3
+  - first:
+      213: -7830933745639557007
+    second: backgroundOfTheHell_4
+  - first:
+      213: 2312055855382014211
+    second: backgroundOfTheHell_5
+  - first:
+      213: 3056957834393798857
+    second: backgroundOfTheHell_6
+  - first:
+      213: -2628271672659743425
+    second: backgroundOfTheHell_7
+  - first:
+      213: 5223996138310366499
+    second: backgroundOfTheHell_8
+  - first:
+      213: 8037556204940175951
+    second: backgroundOfTheHell_9
+  - first:
+      213: 8687636455790695218
+    second: backgroundOfTheHell_10
+  - first:
+      213: 2984516410573459543
+    second: backgroundOfTheHell_11
+  - first:
+      213: -9184613748930935592
+    second: backgroundOfTheHell_12
+  - first:
+      213: 1768998075120339425
+    second: backgroundOfTheHell_13
+  - first:
+      213: -3444396994778704436
+    second: backgroundOfTheHell_14
+  - first:
+      213: 9170284273104287487
+    second: backgroundOfTheHell_15
+  - first:
+      213: 622966346061953657
+    second: backgroundOfTheHell_16
+  - first:
+      213: -8572707954837073392
+    second: backgroundOfTheHell_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: backgroundOfTheHell_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 69
+        width: 60
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9028ccab819a62920800000000000000
+      internalID: 2965243328348324361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_1
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 71
+        width: 70
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ecb3f249c8e7df20800000000000000
+      internalID: 3447479990884744421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_2
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 72
+        width: 75
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4735431cb39e2770800000000000000
+      internalID: 8587963975428552522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_3
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 152
+        width: 57
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9da70d9a8e837a1f0800000000000000
+      internalID: -1033795017525658919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_4
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 106
+        width: 40
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178f8879f3fe25390800000000000000
+      internalID: -7830933745639557007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_5
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 88
+        width: 34
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30928e8fc82161020800000000000000
+      internalID: 2312055855382014211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_6
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 87
+        width: 55
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c8c36434fe7c6a20800000000000000
+      internalID: 3056957834393798857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_7
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 72
+        width: 37
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3de4e1c6d0868bd0800000000000000
+      internalID: -2628271672659743425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_8
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 38
+        width: 55
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32570045fcc5f7840800000000000000
+      internalID: 5223996138310366499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_9
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 150
+        width: 43
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a22b998c22b8f60800000000000000
+      internalID: 8037556204940175951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_10
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 58
+        width: 50
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2335325d35fa09870800000000000000
+      internalID: 8687636455790695218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_11
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 64
+        width: 38
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7501e8edcd12b6920800000000000000
+      internalID: 2984516410573459543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_12
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 44
+        width: 85
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d48dcf1572b98080800000000000000
+      internalID: -9184613748930935592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_13
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 83
+        width: 52
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9c5e3706ebc8810800000000000000
+      internalID: 1768998075120339425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_14
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 129
+        width: 58
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc5dac4be2b0330d0800000000000000
+      internalID: -3444396994778704436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_15
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 41
+        width: 64
+        height: 181
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff67bbbc5f4634f70800000000000000
+      internalID: 9170284273104287487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_16
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 61
+        width: 48
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97abb04579835a800800000000000000
+      internalID: 622966346061953657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: backgroundOfTheHell_17
+      rect:
+        serializedVersion: 2
+        x: 1856
+        y: 58
+        width: 69
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01255c4098f970980800000000000000
+      internalID: -8572707954837073392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      backgroundOfTheHell_0: 2965243328348324361
+      backgroundOfTheHell_1: 3447479990884744421
+      backgroundOfTheHell_10: 8687636455790695218
+      backgroundOfTheHell_11: 2984516410573459543
+      backgroundOfTheHell_12: -9184613748930935592
+      backgroundOfTheHell_13: 1768998075120339425
+      backgroundOfTheHell_14: -3444396994778704436
+      backgroundOfTheHell_15: 9170284273104287487
+      backgroundOfTheHell_16: 622966346061953657
+      backgroundOfTheHell_17: -8572707954837073392
+      backgroundOfTheHell_2: 8587963975428552522
+      backgroundOfTheHell_3: -1033795017525658919
+      backgroundOfTheHell_4: -7830933745639557007
+      backgroundOfTheHell_5: 2312055855382014211
+      backgroundOfTheHell_6: 3056957834393798857
+      backgroundOfTheHell_7: -2628271672659743425
+      backgroundOfTheHell_8: 5223996138310366499
+      backgroundOfTheHell_9: 8037556204940175951
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

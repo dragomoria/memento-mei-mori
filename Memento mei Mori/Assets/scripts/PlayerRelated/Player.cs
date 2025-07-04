@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
@@ -8,7 +9,6 @@ public class Player : MonoBehaviour
     public FeatherBehavior FeatherPrefab;
     public SpawnPickupBehavior pawn;
     private bool curStatus;
-    private FeatherCounter featherManger;
     
     [SerializeField]
     private Transform selfTransform;
@@ -24,16 +24,18 @@ public class Player : MonoBehaviour
     private CameraShake cameraShake;
     [SerializeField]
     private AudioManager audioManager;
+    [SerializeField] SpriteHandler spriteHandler;
 
 
     private float knocbackForce = 5f;
 
     private bool isInvincible = false;
+    private int featherCount = 0;
 
     void Start()
     {
         curStatus = false;
-        featherManger = FeatherCounter.instance;
+        setBaseFeathers(10);
     }
 
     void Update()
@@ -41,24 +43,25 @@ public class Player : MonoBehaviour
         curStatus = pawn.isSpawng;
     }
 
-    public void HealthUp()
+    private void setBaseFeathers(int count)
     {
-        featherManger.IncreaseFeathers(1);;
+        for (int i = 0; i < count; i++)
+        {
+            collectFeather();
+        }
     }
+    
+    private void Dead(){ SceneManager.LoadScene("BadEnding"); }
 
-    private void Dead()
+    private void WinTheGame(){ SceneManager.LoadScene("GoodEnding"); }
+
+
+    public void collectFeather()
     {
+        featherCount++;
+        spriteHandler.updateFeatherCounter();
 
-        //fade out czerwony
-        SceneManager.LoadScene("BadEnding");
     }
-
-    private void WinTheGame()
-    {
-        SceneManager.LoadScene("GoodEnding");
-    }
-
-    //add response to damage by extracting func of getting damage from OnCollisionEnter2D and getDamage method and add there effetcs visual and sound
 
     public void getDamage()
     {
@@ -71,22 +74,27 @@ public class Player : MonoBehaviour
             return;
         else
             StartCoroutine(InvincibilityFrames(1f));
-        
 
         cameraShake.startShake();
 
-        int health = featherManger.currentFeathers;
-        health--;
-        FeatherCounter.instance.DecreaseFeathers(1);
-        if (health <= 0)
+
+
+        FeatherCounter.instance.DecreaseFeathers();
+        if (featherCount <= 0)
         {
             Dead();
+            return;
         }
-        if (health >= 20)
+        if (featherCount >= 20)
         {
             WinTheGame();
+            return;
         }
+
+        featherCount--;
+        spriteHandler.removeLastFeather();
     }
+    
     public void getDamage(Vector3 directionFrom, float? knocbackForce)
     {
         Debug.Log($"Body Type: {playerRb.bodyType}");
@@ -95,9 +103,8 @@ public class Player : MonoBehaviour
         Debug.Log($"applying force towards {knocbackDircetion}");
 
         playerMovement.applyKnockback();
-        // playerRb.AddForce(knocbackDircetion * knocbackForce, ForceMode2D.Impulse);
-        playerRb.linearVelocity = knocbackDircetion * (float) (knocbackForce ?? this.knocbackForce);
-        
+        playerRb.linearVelocity = knocbackDircetion * (float)(knocbackForce ?? this.knocbackForce);
+
         if (isInvincible)
             return;
         getDamage();
@@ -110,7 +117,7 @@ public class Player : MonoBehaviour
         isInvincible = false;
     }
 
-    //invis frames
+
 
 
 

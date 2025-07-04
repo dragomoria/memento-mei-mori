@@ -1,6 +1,9 @@
 using UnityEngine;
 using TMPro;
 
+
+
+//obsolote class
 public class FeatherCounter : MonoBehaviour
 {
 
@@ -19,15 +22,17 @@ public class FeatherCounter : MonoBehaviour
         featherText.text = "Feathers: " + currentFeathers.ToString();
     }
 
-    public void IncreaseFeathers(int v)
+    public void IncreaseFeathers()
     {
-        currentFeathers += v;
+        currentFeathers++;
+
         featherText.text = "Feathers: " + currentFeathers.ToString();
     }
 
-    public void DecreaseFeathers(int v)
+    public void DecreaseFeathers()
     {
-        currentFeathers -= v;
+        currentFeathers--;
+
         featherText.text = "Feathers: " + currentFeathers.ToString();
     }
 }

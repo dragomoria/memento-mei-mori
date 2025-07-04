@@ -8,7 +8,7 @@ public static class GlobalAttackEvent
 
     public static void AttackFinished()
     {
-        Debug.Log("Attack finished");
+        // Debug.Log("Attack finished");
         onAttackFinished?.Invoke();
     }
     public static void SpikeReady()
