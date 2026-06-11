@@ -1,7 +1,7 @@
 # Memento Mei, Mori
 
 HoloJam #6 entry — Theme: Love and Angst Presented at DSW University game conference.
-Completed solo in ~3 days after inheriting the project mid-development.
+Completed solo in ~5 days after inheriting the project mid-development.
 
 ## About
 Visual novel with Undertale-inspired bullet hell combat segment.
